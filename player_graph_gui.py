@@ -44,12 +44,22 @@ def read_data(filename):
 
 def choose_categories(df):
 
-    choices = list(df.columns)
+    choices = ['PTS','FG%','AST','TRB','G','MP','FG','FGA','3P','3PA','FT','FTA','FT%','ORB',
+                    'DRB','STL','BLK','TOV','PF','GmSc','+/-']
+    colors = ['Greys', 'Purples', 'Blues', 'Greens', 'Oranges', 'Reds',
+            'YlOrBr', 'YlOrRd', 'OrRd', 'PuRd', 'RdPu', 'BuPu',
+            'GnBu', 'PuBu', 'YlGnBu', 'PuBuGn', 'BuGn', 'YlGn']
+    graph_styles = ['classic','Solarize_Light2','dark_background','fast','bmh',
+                    'fivethirtyeight','ggplot','seaborn','seaborn-bright','seaborn-darkgrid']
+
 
     layout = [  [sg.Text('What categories you want to compare?',size=(30,1),
-                    justification ='center')],
+                    justification ='center',pad=((10,0),0))],
+            [sg.InputText('Enter Title of Graph Here',key='-title-',justification='center')],
             [sg.InputCombo(choices, size=(20, 1),tooltip='x-axis', key='-x-axis-'),
                 sg.InputCombo(choices, size=(20,1),tooltip='y-axis', key='-y-axis-')],
+            [sg.InputCombo(colors, size=(20, 1),tooltip='color of graph', key='-colors-')],
+            [sg.Listbox(graph_styles,size=(30,3),key='-graph_styles-')],
             [sg.Button('Submit')]  ]
 
     window = sg.Window('Pick a category', layout)
@@ -59,19 +69,22 @@ def choose_categories(df):
         if event == sg.WIN_CLOSED:
             break
         if event == 'Submit':
-            if values['-x-axis-'] and values['-y-axis-']:    # if something is highlighted in the list
+            if values['-x-axis-'] and values['-y-axis-'] and values['-title-'] and values['-graph_styles-']:    # if something is highlighted in the list
                 inputx = values['-x-axis-']
                 inputy = values['-y-axis-']
+                COLOR = values['-colors-']
+                Title = values['-title-']
+                graph_style = values['-graph_styles-']
                 break
 
     window.close()
-    return inputx, inputy
+    return inputx, inputy, COLOR, Title, graph_style
 
-def make_graph(df,inputx,inputy,val):
-    plt.style.use('seaborn')
-    plt.scatter(df[inputx],df[inputy], c=games, cmap='Greys', edgecolor='black',
+def make_graph(df,inputx,inputy,val,COLOR,Title,graph_style):
+    plt.style.use(graph_style)
+    plt.scatter(df[inputx],df[inputy], c=games, cmap=COLOR, edgecolor='black',
             linewidth=1, alpha= 0.6, s=attempts*20)
-    plt.title(val + ' ' + inputx + ' VS ' + inputy)
+    plt.title(Title)
     plt.xlabel(inputx)
     plt.ylabel(inputy)
     plt.xlim(0,(df[inputx].max())*(1.1))
@@ -84,5 +97,5 @@ def make_graph(df,inputx,inputy,val):
 
 filename,val = choose_player()
 df,games,attempts = read_data(filename)
-inputx,inputy = choose_categories(df)
-make_graph(df,inputx,inputy,val)
+inputx,inputy,COLOR,Title,graph_style = choose_categories(df)
+make_graph(df,inputx,inputy,val,COLOR,Title,graph_style)
