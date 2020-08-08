@@ -1,0 +1,169 @@
+Delivered-To: justinlaw31@gmail.com
+Received: by 2002:a19:6142:0:0:0:0:0 with SMTP id m2csp4222053lfk;
+        Sun, 26 Jul 2020 22:27:14 -0700 (PDT)
+X-Received: by 2002:aca:e0d6:: with SMTP id x205mr17170844oig.176.1595827634428;
+        Sun, 26 Jul 2020 22:27:14 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1595827634; cv=none;
+        d=google.com; s=arc-20160816;
+        b=sK9359g3CRvdZ4rUJmjKpz+At7AciXuYYNX9q7VzeKYYkV3ENEKjcuDxeeniuHqa0L
+         k76+k1sWAZYNZ/Q9RcnXyHWWh3fL9x++aTH/HuDEOhPpwm+w19SDUTOJlQQsihXmYCtL
+         HgxBVhoYi5egwgiyPi9UOXvwsqcU89rzkylnDjPhL7Kgh84G+anq0zQBdZCvbg4Ad6B8
+         ZUQr59cEE5nbnmG3mlfO7Yn43K+TGVClCwje9l+wcocCMdK03Zd2+SmWRhHIce0yY5R8
+         7T1aT7+t0t7920iTLyGbEbugUcCyKSFUzeHfHrMyjafEqvrDjSbDN64X43Rwhh8scN6e
+         oysA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:from:subject:date:message-id:references:reply-to:mime-version
+         :dkim-signature;
+        bh=ENRqZBkprkCsErhOjJZhLuRd7sZDoS2PdlRV+hHQ4XQ=;
+        b=e7PRE6MubGKau6DQiRQKcad0yYedUag6ebETE5v6pxQwzA+WwAWzkqkBsbLyGeVswQ
+         Cygn6gea6HHp/jxImV4wm4N9M+iCMj9sjaSLqBFmlZXtFR/vr5IwkRQ990QXio5R95YL
+         s3HlR/ov2FM1ccncfQzFqiPf9zyHs0ChOt9Q+zzS6M095rj99FJ3AOPwS1xz40ooTCJn
+         kG52xPV4gSdqjzBADWfNj5lvWkXt79XSNGnnUq/QzPlp2ePlGMoJxoUqk0qfHN0xFGxP
+         gUHPO+XJD1rI+k9AwEMGmjlgrIRbfrYVNSMj6hK202Jt53yDhTEjs/jSZLzJoy2NxhP0
+         atYg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=JSwmpmJs;
+       spf=pass (google.com: domain of 3swuexxajc_q1jadlapo1gajjazuciweh.ykifqopejhwszxciweh.yki@doclist.bounces.google.com designates 209.85.220.69 as permitted sender) smtp.mailfrom=3sWUeXxAJC_Q1jadlapo1gajjaZuciWeh.YkifqopejhWszxciWeh.Yki@doclist.bounces.google.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <3sWUeXxAJC_Q1jadlapo1gajjaZuciWeh.YkifqopejhWszxciWeh.Yki@doclist.bounces.google.com>
+Received: from mail-sor-f69.google.com (mail-sor-f69.google.com. [209.85.220.69])
+        by mx.google.com with SMTPS id 38sor8237297oty.38.2020.07.26.22.27.13
+        for <justinlaw31@gmail.com>
+        (Google Transport Security);
+        Sun, 26 Jul 2020 22:27:14 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 3swuexxajc_q1jadlapo1gajjazuciweh.ykifqopejhwszxciweh.yki@doclist.bounces.google.com designates 209.85.220.69 as permitted sender) client-ip=209.85.220.69;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=JSwmpmJs;
+       spf=pass (google.com: domain of 3swuexxajc_q1jadlapo1gajjazuciweh.ykifqopejhwszxciweh.yki@doclist.bounces.google.com designates 209.85.220.69 as permitted sender) smtp.mailfrom=3sWUeXxAJC_Q1jadlapo1gajjaZuciWeh.YkifqopejhWszxciWeh.Yki@doclist.bounces.google.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=mime-version:reply-to:references:message-id:date:subject:from:to;
+        bh=ENRqZBkprkCsErhOjJZhLuRd7sZDoS2PdlRV+hHQ4XQ=;
+        b=JSwmpmJs5UA0SndIGBqIbRv+fkr6IY8aN9UAkbBVpk3xMT2p7k9cKsjPGpwM5PG0V6
+         EsfOqW0xKBnVdgI6jMGijvnptII2b2/6ICXAQDqH+p9LlmZekU7I+Jn5Prz1V4YyPg76
+         nTb+x+A+OMpliikKleAlLBwNeLTuA3I3ue8b67Fax8VC5ZqZNx6wFMRGWAK1npA32G6t
+         QJpOmKZoDk22tHmfQo19/xzDFKI4+YkK4GUmYKSCgNsD0FYndIiMW7LOJe0mwn5m2Ov4
+         x5grjTJh+Vd2iDgBIOehC+wmy1mfI8wF6qFNrqZuNiVAFzs1aoBDVEbks5bB56cCk/s+
+         pWnA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:reply-to:references:message-id:date
+         :subject:from:to;
+        bh=ENRqZBkprkCsErhOjJZhLuRd7sZDoS2PdlRV+hHQ4XQ=;
+        b=BsCgz9faro+5r/pmbwzsB2RvMQ3/2TJ6pmdcA0E1+IiupL2vLebTpt/7vVRqoXrCut
+         6NDXnnt6aTc7sh/tfDHC1jEAJm/rCik/PBrmOBZhbaElh5jktGicIqD3JViE2cSvu6mG
+         ZhTcotGrN9NGf7ytISfzWkPmiXHlqYir/e0HL12AaDIgk7QRCNvzWcnzqQe0gfIH/Dop
+         mU+zCMcoA2MwPmAIaq+MDkuk9OM9lK6MGmAu5LWzvDapWVH7ABawkoQrHvDHuQ8va/T3
+         xPQ/ssefGqkfoP58UO24nxWKH7dydYF1Su2n0PI/HieGM6MJmiUhPQSGlOPpPfCE6Cnx
+         AC6g==
+X-Gm-Message-State: AOAM531GcSJsCNL9HEwQWCKnNwVsd+uxU0lXhCZMxQ1ZOvVq8LMIviUB
+	MHK12txOhb87UnftjQGoFEHgDbnVr6k=
+X-Google-Smtp-Source: ABdhPJwU+9cuW58SkOQXG2q1SHo5R7Mx5xNSgF262KOUTSfMjGsx9b0lfEg8uedvwZo+oJM82l6deqrsAnk=
+MIME-Version: 1.0
+X-Received: by 2002:a9d:6d91:: with SMTP id x17mr18996456otp.176.1595827633598;
+ Sun, 26 Jul 2020 22:27:13 -0700 (PDT)
+Reply-To: Stephen Kennedy <5nehpets5kennedy@gmail.com>
+X-No-Auto-Attachment: 1
+References: <ae697294-0e6e-4f3c-8da2-ef59d030d498@docs-share.google.com>
+Message-ID: <00000000000039363e05ab65939b@google.com>
+Date: Mon, 27 Jul 2020 05:27:13 +0000
+Subject: basketball.tar
+From: "Stephen Kennedy (via Google Drive)" <5nehpets5kennedy@gmail.com>
+To: justinlaw31@gmail.com
+Content-Type: multipart/alternative; boundary="00000000000039362d05ab659398"
+
+--00000000000039362d05ab659398
+Content-Type: text/plain; charset="UTF-8"; format=flowed; delsp=yes
+
+I've shared an item with you:
+
+basketball.tar
+https://drive.google.com/file/d/1esMKeFOhcdy92qzc2Sn3G3LKCEly6ypz/view?usp=sharing&ts=5f1e65b1
+
+It's not an attachment -- it's stored online. To open this item, just click  
+the link above.
+
+
+--00000000000039362d05ab659398
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<html><head></head><body><script type=3D"application/json" data-scope=3D"in=
+boxmarkup">{"publisher":{"api_key":"1e6ef4c2b3e67680225868caeb59b7ad","name=
+":"Google Drive"},"api_version":"1.0","updates":{"snippets":[{"icon":"PERSO=
+N","message":"Stephen Kennedy has invited you to edit this file"}],"action"=
+:{"name":"Open","url":"https://drive.google.com/file/d/1esMKeFOhcdy92qzc2Sn=
+3G3LKCEly6ypz/view?usp\u003dsharing_eid\u0026ts\u003d5f1e65b1"}},"entity":{=
+"main_image_url":"https://www.gstatic.com/bt/C3341AA7A1A076756462EE2E5CD71C=
+11/smartmail/bt_google_drive_1600dp_r2.png","external_key":"1esMKeFOhcdy92q=
+zc2Sn3G3LKCEly6ypz","avatar_image_url":"https://www.gstatic.com/bt/C3341AA7=
+A1A076756462EE2E5CD71C11/smartmail/bt_google_drive_avatar_224dp_r1.png","su=
+btitle":"shared by Stephen Kennedy","action":{"name":"Open","url":"https://=
+drive.google.com/file/d/1esMKeFOhcdy92qzc2Sn3G3LKCEly6ypz/view"},"title":"b=
+asketball.tar"}}</script><div style=3D"width: 100%; padding: 24px 0 16px 0;=
+ background-color: #f5f5f5; text-align: center;"><div style=3D"display: inl=
+ine-block; width: 90%; max-width: 680px;min-width: 280px; text-align: left;=
+ font-family: Roboto,Arial,Helvetica,sans-serif;"><div style=3D"height: 0px=
+;" dir=3D"ltr"></div><div style=3D"display: block; padding: 0 2px;"><div st=
+yle=3D"display: block; background: #fff; height: 2px;"></div></div><div sty=
+le=3D"border-left: 1px solid #f0f0f0; border-right: 1px solid #f0f0f0;"><di=
+v style=3D"padding: 24px 32px 24px 32px; background:#fff; border-right: 1px=
+ solid #eaeaea; border-left: 1px solid #eaeaea;" dir=3D"ltr"><div style=3D"=
+font-size: 14px; line-height: 18px; color: #444;"><a href=3D"mailto:5nehpet=
+s5kennedy@gmail.com" style=3D"color:inherit;text-decoration:none">5nehpets5=
+kennedy@gmail.com</a> has shared the following file:</div><div style=3D"hei=
+ght: 10px;"></div><div style=3D"font-size: 18px; display: table;"><div styl=
+e=3D"display: table-row; border-bottom: 4px solid #fff;"><span style=3D"dis=
+play: table-cell;"><div style=3D"height: 32px;"><img src=3D"https://ssl.gst=
+atic.com/docs/documents/share/images/services/generic-1.png" aria-label=3D"=
+Item" style=3D"vertical-align: middle; max-width: 24px;"/></div></span><spa=
+n style=3D"display: table-cell; padding-left: 12px; word-break: break-word;=
+"><a href=3D"https://drive.google.com/file/d/1esMKeFOhcdy92qzc2Sn3G3LKCEly6=
+ypz/view?usp=3Dsharing_eil&amp;ts=3D5f1e65b1" style=3D"color: #3367d6; text=
+-decoration: none; vertical-align: middle;">basketball.tar</a><div itemprop=
+=3D"action" itemscope itemtype=3D"http://schema.org/ViewAction"><meta itemp=
+rop=3D"url" content=3D"https://drive.google.com/file/d/1esMKeFOhcdy92qzc2Sn=
+3G3LKCEly6ypz/view?usp=3Dsharing_eil&amp;ts=3D5f1e65b1"></div></span></div>=
+</div><div style=3D"height: 32px;"></div><div><a href=3D"https://drive.goog=
+le.com/file/d/1esMKeFOhcdy92qzc2Sn3G3LKCEly6ypz/view?usp=3Dsharing_eip&amp;=
+ts=3D5f1e65b1" target=3D"_blank" style=3D"background-color: #4d90fe; border=
+: 1px solid #3079ed; border-radius: 2px; color: white; display: inline-bloc=
+k; font: bold 11px Roboto,Arial,Helvetica,sans-serif; height: 29px; line-he=
+ight: 29px; min-width: 54px; outline: 0px; padding: 0 8px; text-align: cent=
+er; text-decoration: none">Open</a></div></div></div><table style=3D"width:=
+ 100%; border-collapse: collapse;" role=3D"presentation"><tr><td style=3D"p=
+adding: 0px;"><table style=3D"border-collapse: collapse; width: 3px;" role=
+=3D"presentation"><tr height=3D"1"><td width=3D"1" bgcolor=3D"#f0f0f0" styl=
+e=3D"padding: 0px;"></td><td width=3D"1" bgcolor=3D"#eaeaea" style=3D"paddi=
+ng: 0px;"></td><td width=3D"1" bgcolor=3D"#e5e5e5" style=3D"padding: 0px;">=
+</td></tr><tr height=3D"1"><td width=3D"1" bgcolor=3D"#f0f0f0" style=3D"pad=
+ding: 0px;"></td><td width=3D"1" bgcolor=3D"#eaeaea" style=3D"padding: 0px;=
+"></td><td width=3D"1" bgcolor=3D"#eaeaea" style=3D"padding: 0px;"></td></t=
+r><tr height=3D"1"><td width=3D"1" bgcolor=3D"#f5f5f5" style=3D"padding: 0p=
+x;"></td><td width=3D"1" bgcolor=3D"#f0f0f0" style=3D"padding: 0px;"></td><=
+td width=3D"1" bgcolor=3D"#f0f0f0" style=3D"padding: 0px;"></td></tr></tabl=
+e></td><td style=3D"width: 100%; padding: 0px;"><div style=3D"height: 1px; =
+width: auto; border-top: 1px solid #ddd; background:#eaeaea; border-bottom:=
+ 1px solid #f0f0f0;"></div></td><td style=3D"padding: 0px;"><table style=3D=
+"border-collapse: collapse; width: 3px;" role=3D"presentation"><tr height=
+=3D"1"><td width=3D"1" bgcolor=3D"#e5e5e5" style=3D"padding: 0px;"></td><td=
+ width=3D"1" bgcolor=3D"#eaeaea" style=3D"padding: 0px;"></td><td width=3D"=
+1" bgcolor=3D"#f0f0f0" style=3D"padding: 0px;"></td></tr><tr height=3D"1"><=
+td width=3D"1" bgcolor=3D"#eaeaea" style=3D"padding: 0px;"></td><td width=
+=3D"1" bgcolor=3D"#eaeaea" style=3D"padding: 0px;"></td><td width=3D"1" bgc=
+olor=3D"#f0f0f0" style=3D"padding: 0px;"></td></tr><tr height=3D"1"><td wid=
+th=3D"1" bgcolor=3D"#f0f0f0" style=3D"padding: 0px;"></td><td width=3D"1" b=
+gcolor=3D"#f0f0f0" style=3D"padding: 0px;"></td><td width=3D"1" bgcolor=3D"=
+#f5f5f5" style=3D"padding: 0px;"></td></tr></table></td></tr></table><table=
+ style=3D"padding: 14px 10px 0 10px;" role=3D"presentation" dir=3D"ltr"><tr=
+><td style=3D"width: 100%; font:11px Roboto,Arial,Helvetica,sans-serif; col=
+or:#646464; line-height: 20px; min-height: 40px; vertical-align: middle;">G=
+oogle Drive: Have all your files within reach from any device. <br/>Google =
+LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA</td><td style=
+=3D"padding-left: 20px; vertical-align: middle;"><a href=3D"http://drive.go=
+ogle.com" target=3D"_blank"><img src=3D"https://www.gstatic.com/images/bran=
+ding/googlelogo/1x/googlelogo_tm_black54_color_96x40dp.png" width=3D"96" al=
+t=3D"Logo for Google Drive" border=3D"0"></a></td></tr></table></div></div>=
+</body></html>
+--00000000000039362d05ab659398--

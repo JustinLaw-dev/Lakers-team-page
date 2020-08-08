@@ -1,0 +1,988 @@
+team.js
+export const teamData = [
+  {
+    teamName: 'Warriors',
+    teamCity: 'Golden State',
+    teamAbbrev: 'GSW'
+  },
+  {
+    teamName: 'Cavaliers',
+    teamCity: 'Cleveland',
+    teamAbbrev: 'CLE'
+  },
+  {
+    teamName: 'Spurs',
+    teamCity: 'San Antonio',
+    teamAbbrev: 'SAS'
+  },
+  {
+    teamName: 'Lakers',
+    teamCity: 'Los Angeles',
+    teamAbbrev: 'LAL'
+  },
+  {
+    teamName: 'Celtics',
+    teamCity: 'Boston',
+    teamAbbrev: 'BOS'
+  },
+  {
+    teamName: 'Thunder',
+    teamCity: 'Oklahoma City',
+    teamAbbrev: 'OKC'
+  },
+  {
+    teamName: 'Rockets',
+    teamCity: 'Houston',
+    teamAbbrev: 'HOU'
+  },
+  {
+    teamName: 'Bulls',
+    teamCity: 'Chicago',
+    teamAbbrev: 'CHI'
+  },
+  {
+    teamName: 'Knicks',
+    teamCity: 'New York',
+    teamAbbrev: 'NYK'
+  },
+  {
+    teamName: 'Raptors',
+    teamCity: 'Toronto',
+    teamAbbrev: 'TOR'
+  },
+  {
+    teamName: '76ers',
+    teamCity: 'Philadelphia',
+    teamAbbrev: 'PHI'
+  },
+  {
+    teamName: 'Bucks',
+    teamCity: 'Milwaukee',
+    teamAbbrev: 'MIL'
+  },
+  {
+    teamName: 'Timberwolves',
+    teamCity: 'Minnesota',
+    teamAbbrev: 'MIN'
+  },
+  {
+    teamName: 'Wizards',
+    teamCity: 'Washington',
+    teamAbbrev: 'WAS'
+  },
+  {
+    teamName: 'Clippers',
+    teamCity: 'Los Angeles',
+    teamAbbrev: 'LAC'
+  },
+  {
+    teamName: 'Trail Blazers',
+    teamCity: 'Portland',
+    teamAbbrev: 'POR'
+  },
+  {
+    teamName: 'Heat',
+    teamCity: 'Miami',
+    teamAbbrev: 'MIA'
+  },
+  {
+    teamName: 'Pelicans',
+    teamCity: 'New Orleans',
+    teamAbbrev: 'NOP'
+  },
+  {
+    teamName: 'Jazz',
+    teamCity: 'Utah',
+    teamAbbrev: 'UTA'
+  },
+  {
+    teamName: 'Grizzlies',
+    teamCity: 'Memphis',
+    teamAbbrev: 'MEM'
+  },
+  {
+    teamName: 'Nuggets',
+    teamCity: 'Denver',
+    teamAbbrev: 'DEN'
+  },
+  {
+    teamName: 'Mavericks',
+    teamCity: 'Dallas',
+    teamAbbrev: 'DAL'
+  },
+  {
+    teamName: 'Hornets',
+    teamCity: 'Charlotte',
+    teamAbbrev: 'CHA'
+  },
+  {
+    teamName: 'Pistons',
+    teamCity: 'Detroit',
+    teamAbbrev: 'DET'
+  },
+  {
+    teamName: 'Magic',
+    teamCity: 'Orlando',
+    teamAbbrev: 'ORL'
+  },
+  {
+    teamName: 'Pacers',
+    teamCity: 'Indiana',
+    teamAbbrev: 'IND'
+  },
+  {
+    teamName: 'Hawks',
+    teamCity: 'Atlanta',
+    teamAbbrev: 'ATL'
+  },
+  {
+    teamName: 'Suns',
+    teamCity: 'Phoenix',
+    teamAbbrev: 'PHX'
+  },
+  {
+    teamName: 'Kings',
+    teamCity: 'Sacramento',
+    teamAbbrev: 'SAC'
+  },
+  {
+    teamName: 'Nets',
+    teamCity: 'Brooklyn',
+    teamAbbrev: 'BKN'
+  },
+]
+
+
+
+ teams_2017.js
+export const REDDIT = 'REDDIT';
+export const TWITTER = 'TWITTER';
+export const YOUTUBE = 'YOUTUBE';
+
+const tank = [
+  'lal', 'phx', 'phi', 'bos',
+  'sac', 'orl', 'nyk', 'nop',
+  'dal', 'min', 'cha',
+]
+
+// This is 111 calls every 2 minutes
+// Limit is 1500 calls every 15 min
+export const TWITTER_HANDLES = {
+  'NBAonTNT': ['main'],
+  'NBA': ['main'],
+  'ESPNNBA': ['main'],
+  'ZachLowe_NBA': ['main'],
+  'BillSimmons': ['main'],
+  'BleacherReport': ['main'],
+  'haralabob': ['main'],
+  'netw3rk': ['main'],
+  'NateDuncanNBA': ['main'],
+  'kpelton': ['main'],
+  'BaxterHolmes': ['main', 'lal'],
+  'Herring_NBA': ['main'],
+  'mcten': ['main', 'cle'],
+  'HowardBeck': ['main'],
+  'KingJames': ['main', 'cle'],
+  'kobebryant': ['main', 'lal'],
+  'SHAQ': ['main'],
+  'wojespn': ['main'],
+  'TheSteinLine': ['main'],
+  'johnschuhmann': ['main'],
+  'Rachel__Nichols': ['main'],
+  'DragonflyJonez': ['main'],
+  'talkhoops': ['main'],
+  'TimBontemps': ['main'],
+  'MikePradaSBN': ['main'],
+  'Nick_Sciria': ['main'],
+  'StephenCurry30': ['main', 'gsw'],
+  'KDTrey5': ['main', 'gsw'],
+  'ShamsCharania': ['main'],
+  'WindhorstESPN': ['main'],
+  'bballbreakdown': ['main'],
+  'tomhaberstroh': ['main'],
+  'daldridgetnt': ['main'],
+  'ramonashelburne': ['main'],
+  'Pflanns': ['main'],
+  'SBNationNBA': ['main'],
+  'MarcJSpearsESPN': ['main'],
+  'KristenLedlow': ['main'],
+  'sam_amick': ['main'],
+  'usatodaynba': ['main'],
+  'JustinVerrier': ['main'],
+  // 'DraftExpress': tank,
+  // 'chadfordinsider': tank,
+
+  'warriors': ['gsw'],
+  'SherwoodStrauss': ['gsw'],
+  'ChrisBHaynes': ['gsw'],
+  'SteveKerr': ['gsw'],
+  'anthonyVslater': ['gsw'],
+  'DannyLeroux': ['gsw'],
+
+  'cavs': ['cle'],
+  'JasonLloydNBA': ['cle'],
+  'AmicoHoops': ['cle'],
+  'kevinlove': ['cle'],
+  'imanshumpert': ['cle'],
+  'joevardon': ['cle'],
+
+  'PelicansNBA': ['nop'],
+  'Jim_Eichenhofer': ['nop'],
+  'JoelMeyersNBA': ['nop'],
+  'SeanKelleyLive': ['nop'],
+
+  'chicagobulls': ['chi'],
+  'KCJHoop': ['chi'],
+  'NickFriedell': ['chi'],
+  'ctsbulls': ['chi'],
+  'SamSmithHoops': ['chi'],
+
+  'dallasmavs': ['dal'],
+  'DwainPrice': ['dal'],
+  'espn_macmahon': ['dal'],
+  'coopmavs': ['dal'],
+  'MFollowill': ['dal'],
+  'swish41': ['dal'],
+
+  'HoustonRockets': ['hou'],
+  'Jonathan_Feigen': ['hou'],
+
+  'spurs': ['sas'],
+  'JMcDonald_SAEN': ['sas'],
+  'mikecwright': ['sas'],
+  'BillLand': ['sas'],
+  'SpursRadio': ['sas'],
+  'paugasol': ['sas'],
+
+  'okcthunder': ['okc'],
+  'royceyoung': ['okc'],
+  'Exhoopsmc': ['okc'],
+  'Enes_Kanter': ['okc'],
+
+  'nyknicks': ['nyk'],
+  'Al_Iannazzone': ['nyk'],
+  'FisolaNYDN': ['nyk'],
+  'briancmahoney': ['nyk'],
+  'SBondyNYDN': ['nyk'],
+
+  'LAClippers': ['lac'],
+  'TomerAzarly': ['lac'],
+  'Ohmeomy': ['lac'],
+  'JCrossover': ['lac'],
+  'blakegriffin32': ['lac'],
+  'CP3': ['lac'],
+
+  'Lakers': ['lal'],
+  'LakersNation': ['lal'],
+  'MarkG_Medina': ['lal'],
+  'MagicJohnson': ['lal'],
+  'billoram': ['lal'],
+  'KevinDing': ['lal'],
+  'ZO2_': ['lal'],
+
+  'MiamiHEAT': ['mia'],
+  'IraHeatBeat': ['mia'],
+  'AlbertNahmad': ['mia'],
+  'youngwhiteside': ['mia'],
+
+  'SacramentoKings': ['sac'],
+  'mr_jasonjones': ['sac'],
+  'GrantNapearshow': ['sac'],
+
+  'celtics': ['bos'],
+  'AdamHimmelsbach': ['bos'],
+  'GwashburnGlobe': ['bos'],
+  'SeanGrandePBP': ['bos'],
+  'gordonhayward': ['bos'],
+
+  'utahjazz': ['uta'],
+  'DJJazzyJody': ['uta'],
+  'aaronfalk': ['uta'],
+  'rudygobert27': ['uta'],
+
+  'Timberwolves': ['min'],
+  'APkrawczynski': ['min'],
+  'WolvesRadio': ['min'],
+  'JerryZgoda': ['min'],
+  'JimPeteHoops': ['min'],
+
+  'BrooklynNets': ['bkn'],
+  'NYPost_Lewis': ['bkn'],
+  'briancmahoney': ['bkn'],
+  'JLin7': ['bkn'],
+  'Dloading': ['bkn'],
+
+  'ATLHawks': ['atl'],
+  'BobRathbunTV': ['atl'],
+  'HawksPR': ['atl'],
+  'DwightHoward': ['atl'],
+  'DennisMike93': ['atl'],
+
+  'Suns': ['phx'],
+  'ValleyoftheSuns': ['phx'],
+  'DevinBook': ['phx'],
+  'EBled2': ['phx'],
+  'JaredDudley619': ['phx'],
+  'tulis3': ['phx'],
+
+  'Raptors': ['tor'],
+  'JLew1050': ['tor'],
+  'SmithRaps': ['tor'],
+  'RaptorsMR': ['tor'],
+  'WolstatSun': ['tor'],
+
+  'memgrizz': ['mem'],
+  'geoff_calkins': ['mem'],
+  'PetePranica': ['mem'],
+  'CAGrizBeat': ['mem'],
+  'FlyerGrizBlog': ['mem'],
+
+  'nuggets': ['den'],
+  'chrisadempsey': ['den'],
+  'ChrisMarlowe': ['den'],
+  'RadioKoz': ['den'],
+
+  'trailblazers': ['por'],
+  'BlazerFreeman': ['por'],
+  'mikegrich': ['por'],
+  'KevinCalabro': ['por'],
+  'thekidet': ['por'],
+  'Dame_Lillard': ['por'],
+  'CJMcCollum': ['por'],
+
+  'hornets': ['cha'],
+  'SwarmnSting': ['cha'],
+  'SteveReedAP': ['cha'],
+  'HornetsOnFSSE': ['cha'],
+  'StephanieReady': ['cha'],
+
+  'DetroitPistons': ['det'],
+  'detnewsRodBeard': ['det'],
+  'Keith_Langlois': ['det'],
+  'DuncanSmithNBA': ['det'],
+
+  'Pacers': ['ind'],
+  '8pts9secs': ['ind'],
+  'ChrisDenari': ['ind'],
+  'ByNateTaylor': ['ind'],
+
+  'Bucks': ['mil'],
+  'cf_gardner': ['mil'],
+  'Paschketball': ['mil'],
+  'nbated': ['mil'],
+  'fmaddenNBA': ['mil'],
+  'PatelESPN': ['mil'],
+
+  'OrlandoMagic': ['orl'],
+  'JoshuaBRobbins': ['orl'],
+  'EvanFourmizz': ['orl'],
+  'elfrid': ['orl'],
+
+  'sixers' : ['phi'],
+  // 'JCameratoCSN': ['phi'],
+  'PompeyOnSixers': ['phi'],
+  'DerekBodnerNBA': ['phi'],
+  'JoelEmbiid': ['phi'],
+
+  'WashWizards': ['was'],
+  'Truth_About_It': ['was'],
+  'BulletsForever': ['was'],
+  'CandaceDBuckner': ['was'],
+  'JohnWall': ['was'],
+  'RealDealBeal23': ['was'],
+  'brandonjennings' : ['was'],
+
+
+  // 'mcuban',
+
+  // 'BobbyMarks42',
+
+  // 'outsidethenba',
+  // 'DanFeldmanNBA',
+  // 'JADubin5',
+  // 'RotowireATC',
+  // 'LarryCoon',
+  // 'theshrillest',
+  // 'Neil_Paine',
+};
+
+
+// http://johnnythetank.github.io/youtube-channel-name-converter/
+
+export const YOUTUBE_CHANNEL_IDS = {
+  'UCWJ2lWNubArHWmf3FIHbfcQ': ['main'], // NBA
+  'UCU7iRrk3xfpUk0R6VdyC1Ow': ['main'], // NBA on TNT
+  'UCEjOSbbaOfgnfRODEEMYlCw': ['main'], // FreeDawkins
+  // 'UCYuF6sW95Ge8O20LQjYVSaQ': ['main'], // Ximo Pierto
+  // 'UCnxJO_6sqlaYSbbVWfP0X1Q': ['main'], // Ximo Pierto Final
+  // 'UCBIe6BPj49pnEoAdKGLduIA': ['main'], // NBATODAY24
+  'UCmJen5_cQofZXbtzulZj9MQ': ['main'], // DownToBuck
+  'UCd_EkHbEutirFl_XSrg95kA': ['main'], // GD's Latest Highlights
+  'UCg7obvx4XYBYmTkEBe2_EFQ': ['main'], // The Jump
+  'UCfrxsiT3B8yxzUSkpLgz4uw': ['main'], // AK Highlights
+  'UCAdiVHtnQVFCWPIAUysy_-A': ['cle'], // Cleveland Cavaliers Basketball
+  'UCbNWe0snu7U9H2qioNH2nvg': ['lal'], // Lakers Nation
+  'UCeYc_OjHs3QNxIjti2whKzg': ['gsw'], // Golden State Warriors
+  'UC0hb8f0OXHEzDrJDUq-YVVw': ['nyk'], // New York Knicks,
+  'UCF6-4-eLBUb2VuJMHl7SGyA': ['main'] // lowlights
+};
+
+export const FEED_TYPES = [
+  'main',
+  'atl',
+  'bos',
+  'bkn',
+  'cha',
+  'chi',
+  'cle',
+  'dal',
+  'den',
+  'det',
+  'gsw',
+  'hou',
+  'ind',
+  'lac',
+  'lal',
+  'mem',
+  'mia',
+  'mil',
+  'min',
+  'nop',
+  'nyk',
+  'okc',
+  'orl',
+  'phi',
+  'phx',
+  'por',
+  'sac',
+  'sas',
+  'tor',
+  'uta',
+  'was',
+];
+
+// http://stackoverflow.com/questions/21970173/searching-for-list-of-words-occurrences-in-a-string
+
+// TODO: This needs to hold official player names and management names
+// Not sure if we need this yet, might just rely on FEED_TYPE_CUSTOM_KEYWORDS
+export const FEED_TYPE_PLAYER_KEYWORDS = {
+  // 'hawks': [],
+  // 'celtics': [],
+  // 'nets': [],
+  // 'hornets': [],
+  // 'bulls': [],
+  // 'cavaliers': ['Kyrie Irving'],
+  // 'mavericks': [],
+  // 'nuggets': [],
+  // 'pistons': [],
+  // 'warriors': [],
+  // 'rockets': [],
+  // 'pacers': [],
+  // 'clippers': [],
+  // 'lakers': ['Kobe Bryant', 'Jeanie Buss'],
+  // 'grizzlies': [],
+  // 'heat': [],
+  // 'bucks': [],
+  // 'timberwolves': [],
+  // 'pelicans': [],
+  // 'knicks': [],
+  // 'thunder': [],
+  // 'magic': [],
+  // 'sixers': [],
+  // 'suns': [],
+  // 'blazers': [],
+  // 'kings': [],
+  // 'spurs': [],
+  // 'raptors': [],
+  // 'jazz': [],
+  // 'wizards': [],
+};
+
+/*
+  get all names of cavs
+  put them in cavs array
+  check special player object
+  {
+    'lebron James': ['king james', 'lebron', 'lbjames', 'KingJames', 'lebron james', 'lbj']
+  }
+  ...object['leborn james']
+*/
+
+//   'derrick williams', 'deron', 'deron williams', 'dwill', 'd will', 'dthrill',
+// 'mcadoo', 'james mccadoo', 'jmm',
+
+const CAVS = [
+  'cle', 'cavaliers', 'cavalier', 'cleveland', 'cavs', '#cavs', 'bron',
+  'king james', 'lebron', 'lbjames', 'KingJames', 'lebron james', 'lbj',
+  'klove', 'kevin love', 'kevinlove', 'love',
+  'iman', 'shumpert',
+  'tt', 'tristan', 'tristan thompson',
+  'jr', 'j.r.', 'jr smith', 'j.r. smith',
+  'frye', 'channing', 'channing frye',
+  'korver', 'kyle korver',
+  'dan gilbert', 'ty', 'lue',
+  'it4', 'isaiah', 'isaiah thomas',
+  'jeff green',
+  'dwyane', 'wade', 'way of wade', 'wayofwade', 'dwade', 'd-wade', 'd wade', 'DwyaneWade',
+  'derrick rose', 'rose',
+  'jae', 'crowder',
+  'jose', 'calderon',
+];
+
+const WARRIORS = [
+  'gsw', 'gs', 'warriors', 'goldenstate',
+  'golden state',
+  'kd', 'durant',
+  'curry', 'steph', 'baby face assassin',
+  'kerr',
+  'klay', 'klay thompson',
+  'andre', 'iguodala', 'iggy',
+  'livingston', 'shaun',
+  'west', 'david west',
+  'kevon', 'looney',
+  'mccaw', 'patrick mccaw',
+  'zaza', 'pachulia',
+  'damian jones',
+  'ian', 'clark',
+  'javale', 'mcgee',
+  'lacob', 'lightyears', 'light years', 'light-years',
+  'ron adams',
+  'mike brown',
+  'draymond', 'green', 'dray', 'kicks nuts', 'kicked in the nuts', 'natural shooting motion',
+  'swaggy p', 'nick young',
+  'jordan bell'
+];
+
+const CLIPPERS = [
+  'lac', 'clippers', 'LAClippers', 'blake',
+  'lou will', 'lou', 'patrick beverley', 'beverley', 'dekker',
+  'griffen', 'dj', 'deandre',
+  'deandre jordan', 'doc', 'rivers',
+  'wes', 'wesley johnson',
+  'luc', 'moute', 'lrmm', 'bass', 'brandon bass', 'mike woodson', 'woodson',
+  'la', 'balmer', 'brice johnson', 'diamond stone',
+  'montrezl', 'harrell',
+  'gallo', 'danilo', 'gallinari',
+  'milos', 'teodosic'
+];
+
+const SPURS = [
+  'sas', 'sa', 'spurs', 'san antonio', 'gospursgo',
+  'kawhi leonard', 'leonard', 'kawhi', 'claw', 'pau', 'gasol',
+  'pau gasol', 'manu', 'ginobili', 'tony parker', 'parker',
+  'patty', 'mills', 'lamarcus aldridge', 'lma',
+  'duncan', 'timmy', 'danny green',
+  'simmons', 'dedmon', 'dejounte', 'dewayne', 'bertans',
+  'pop', 'gregg', 'popovich', 'joel anthony',
+  'bryn', 'forbes'
+];
+
+const RAPTORS = [
+  'tor', 'raptors', 'toronto', 'we the north',
+  'deebo', 'derozan', 'demar', 'lowry',
+  'kyle lowry', 'masai', 'ujiri',
+  'patterson', 'powell', 'norman', 'cory joseph', 'cory',
+  'ibaka', 'serge', 'bruno', 'jonas',
+  'valanciunas', 'drake', 'demarre', 'carroll',
+  'pascal', 'siakam', 'fred vanvleet', 'delon wright',
+  'jakob', 'poeltl',
+  'OG Anunoby', 'Anunoby',
+  'Lucas Nogueira',
+  'miles', 'cj miles',
+];
+
+const LAKERS = [
+  'lal', 'lakers', 'laker',
+  'luke walton', 'walton', 'pelinka', 'rob pelinka',
+  'kobe', 'bryant', 'mamba',
+  'vino', 'black mamba', 'frobe',
+  'magic', 'magic johnson', 'los angeles',
+  'zubac',
+  'metta', 'world peace',
+  'brewer', 'corey', 'larry nance',
+  'lnj', 'nance', 'buss', 'jeanie',
+  'tyler ennis',
+  'luol', 'deng',
+  'nwaba', 'brian shaw', 'julius', 'randle',
+  'dangelo', 'angelo', 'd\'lo',
+  'byron', 'byron scott',
+  'lonzo ball', 'lonzo', 'lavar', 'lavar ball',
+  'lamelo', 'liangelo',
+  'brook', 'brook lopez', 'brolo',
+  'Kyle Kuzma', 'kuzma', 'kuz',
+  'josh hart',
+  'ingram',
+];
+
+const ROCKETS = [
+  'hou', 'rockets', 'houston', 'HoustonRockets',
+  'harden', 'the beard', 'haren',
+  'rox', 'ariza', 'trevor',
+  'clint', 'capela',  'ryan', 'anderson',
+  'eric', 'gordon',  'nene', 'clutch city',
+  'toyota center', 'pringles',
+  'mda', 'd\'antoni', 'antoni',
+  'morey', 'daryl',
+  'onuaku', 'chinanu', 'wiltjer', 'bobby brown',
+  'chris paul', 'point god', 'cp3',
+  'tarik black',
+  'Zhou Qi',
+  'tucker',
+];
+
+const THUNDER = [
+  'okc', 'thunder', 'okcthunder', 'oklahoma city', 'westbrook',
+  'russ', 'brodie', 'russell', 'adams', 'steven adams',
+  'singler', 'cole', 'norris',
+  'andre roberson', 'roberson',
+  'domantas', 'sabonis', 'jerami grant', 'jerami',
+  'billy', 'billy donovan',
+  'presti',
+  'andre', 'nick collison', 'semaj christon', 'joe huestis',
+  'felton', 'raymond',
+  'carmelo', 'me7o', 'melo',
+  'paul george', 'pg13', 'pg',
+  'patrick patterson',
+];
+
+const JAZZ = [
+  'uta', 'jazz', 'utah', 'utahjazz',  'gobert', 'stifle tower',
+  'derrick favors', 'favors', 'trey', 'lyles',
+  'ingels', 'joe johnson', 'rudy',
+  'alec', 'burks',
+  'dante', 'exum',
+  'Donovan Mitchell', 'Mitchell',
+  'rodney', 'hood',
+  'mack', 'shlevin',
+  'raul', 'neto',
+  'quin', 'snyder', 'joel bolomboy', 'jeff withey', 'karl malone',
+  'stockton', 'john stockton',
+  'rubio', 'ricky',
+  'thabo', 'sefolosha',
+
+];
+
+const CELTICS = [
+  'bos', 'celtics', 'boston', 'ainge', 'danny ainge',
+  'marcus smart',
+  'horford', 'al',
+  'amir', 'amir johnson', 'jerebko', 'james young', 'kelly',
+  'olynyk', 'gerald', 'gerald green', 'tyler zeller',
+  'rozier', 'jaylen', 'brown',
+  'tom brady', 'brad', 'stevens', 'garden', 'boston garden',
+  'jordan mickey', 'mickey', 'demetrius', 'demetrius jackson',
+  'kyrie', 'irving', 'KyrieIrving', 'uncle drew', 'uncledrew',
+  'baynes',
+  'pierce', 'paul pierce', 'the truth',
+  'gordon', 'hayward',
+  'Jayson Tatum', 'Tatum', 'Jayson',
+  'marcus morris', 'marcus', 'morris',
+];
+
+const BULLS = [
+  'chi', 'bulls', 'chicago', 'chicagobulls',
+  'robin lopez', 'rolo', 'robin',
+  'valentine',
+  'bobby', 'portis', 'jerian grant', 'jerian', 'canaan',
+  'fred', 'hoidberg', 'gar', 'garpax', 'pax', 'paxson',
+  'foreman',  'nikola mirotic', 'mirotic', 'morrow',
+  'cristiano', 'felicio', 'zipser', 'cameron payne', 'payne',
+  'joffrey', 'lauvergne',
+  'dunn', 'kris',
+  'lavine',
+];
+
+const KNICKS = [
+  'nyk', 'ny', 'knicks', 'nyknicks', 'new york',
+  'porzingis', 'prozingod', 'kp6',
+  'hornacek', 'kristaps', 'KOQ',
+  'o\'quinn', 'quinn', 'justin holiday', 'kuzminskas', 'marshall',
+  'mashall plumlee',
+  'joakim', 'noah',
+  'courtney', 'courtney lee',
+  'lance thomas', 'sasha', 'hernangomez', 'ron', 'baker', 'rambis',
+  'dolan', 'james dolan', 'oakley', 'oak',
+  'chasson randle', 'ndour',
+  'enes', 'kanter',
+  'doug', 'mcdermott',
+  'Frank Ntilikina', 'Ntilikina'
+];
+
+const GRIZZLIES = [
+  'mem', 'grizzlies', 'memphis', 'memgrizz', 'marc', 'gasol',
+  'marc gasol', 'mike conley',
+  'chandler', 'parsons', 'fiz', 'fizdale', 'david fizdale',
+  'jamychal', 'jamychal green', 'ennis',
+  'brandan', 'wright', 'james ennis', 'jarell martin',
+  'vinsanity', 'wade baldwin', 'andrew harrison',
+  'chalmers', 'mario',
+  'ben mclemore', 'mclemore',
+  'Ivan Rabb', 'Rabb'
+];
+
+const WIZARDS = [
+  'wsh', 'wizards', 'washington', 'WashWizards',
+  'john wall', 'wall',
+  'beal', 'bradley', 'brad',
+  'markieff', 'morris',
+  'scott brooks', 'brooks',
+  'macin', 'gortat',
+  'ian', 'mahinmi',
+  'jason smith',
+  'jennings', 'brandon jennings',
+  'grunfeld', 'ernie',
+  'bullets', 'dmv', 'verizon center',
+  'otto', 'porter',
+  'bojan', 'bogdanovic',
+  'oubre',
+  'satoransky', 'mcclellan', 'ochefu'
+];
+
+const HEAT = [
+  'mia', 'heat', 'miami', 'MiamiHEAT',
+  'waiters', 'dion', 'd-wait', 'dion waiters', 'waiters island', 'waiter island',
+  'goran', 'dragic', 'goran_dragic',
+  'pat', 'riley',
+  'josh', 'richardson',
+  'tyler johnson', 'hassan', 'whiteside', 'youngwhiteside', 'okaro',
+  'bosh', 'babbitt',
+  'haslem', 'udonis',
+  'james johnson', 'johnson', 'JJ',
+  'winslow', 'justice',
+  'spo', 'erik', 'spoelstra',
+  'south beach'
+];
+
+const HAWKS = [
+  'atl', 'hawks', 'atlanta', 'ATLHawks',
+  'schroder', 'dennis',
+  'ersan', 'ilyasova',
+  'tim', 'hardaway',
+  'taurean', 'prince',
+  'kris', 'humphries',
+  'mike dunleavy', 'dunleavy', 'bud', 'budenholzer',
+  'richard', 'richard jefferson', 'rj', 'rjeff24',
+  'kay felder',
+];
+
+const PISTONS = [
+  'det', 'pistons', 'detroit', 'DetroitPistons', 'drummond', 'reggie jackson',
+  'svg', ' gundy', 'stan', 'van',
+  'ish', 'smith',
+  'auburn',
+  'stanley', 'jon', 'leuer', 'boban',
+  'marjanovic', 'beno', 'tobias', 'tobias harris',
+  'avery bradley', 'avery', 'bradley',
+];
+
+const BLAZERS = [
+  'por', 'blazers', 'portland', 'trailblazers', 'trail blazers', 'rip city', 'ripcity',
+  'damian lillard', 'lillard', 'mccollum', 'damian', 'cj', 'c.j.',
+  'evan turner', 'turner',
+  'ed davis', 'harkless', 'meyers', 'meyers leonard', 'aminu', 'noah',
+  'vonleh', 'nurkic', 'jusuf', 'napier', 'terry', 'stotts', 'paul allen',
+  'layman', 'quarterman', 'connaughton', 'bill walton'
+];
+
+const BUCKS = [
+  'mil', 'bucks', 'milwaukee', 'greek', 'greek freak',
+  'jabari parker', 'jabari', 'parker', 'giannis', 'antetokounmpo',
+  'snell', 'tony snell', 'henson', 'hawes', 'middleton', 'khris',
+  'monroe', 'beas', 'michael beasley', 'beasley', 'delly', 'dellavedova',
+  'thon', 'maker', 'jason terry', 'terry', 'mirza', 'teletovic', 'brogdon',
+  'malcom', 'kidd', 'jason kidd'
+];
+
+const MAVERICKS = [
+  'dal', 'mavericks', 'dallas', 'dirk', 'mavs', 'dallasmavs', 'swish41',
+  'nowitzki', 'cuban', 'seth', 'seth curry', 'yogi', 'ferrell',
+  'barea', 'barnes', 'harrison', 'wesley matthews', 'matthews',
+  'wes matthews', 'noel', 'nerlens', 'devin harris', 'dwight powell',
+  'carlisle', 'carlile', 'rick', 'cubes', 'powell',
+  'liggins', 'deandre liggins',
+  'josh mcroberts', 'mcroberts',
+];
+
+const TIMBERWOLVES = [
+  'min', 'timberwolves', 'minnesota', 'kat',
+  'wiggins', 'wolves', 'towns', 'andrew',
+  'zach', 'karl',  'thibs', 'dieng', 'gorgui', 'muhammad',
+  'shabazz', 'payne', 'cole', 'aldrich',
+  'tyus', 'tyus jones', 'jones',
+  'tom', 'thibodeau',
+  'bjeli', 'nemanja', 'bjelica',
+  'jamal', 'jamal crawford', 'crawford',
+  'jimmy', 'jimmy butler', 'jimmy buckets',
+  'taj', 'gibson',
+];
+
+const NUGGETS = [
+  'den', 'nuggets', 'denver', 'jamal murray', 'murray', 'jokic', 'nikola',
+  'mike malone', 'malone', 'wilson', 'chandler', 'gary', 'harris',
+  'kenneth', 'faried', 'manimmal', 'plumlee', 'mason',
+  'jameer', 'nelson', 'will barton', 'barton',
+  'hibbert', 'darrell', 'arthur',
+  'emmanuel', 'mudiay',
+  'paul millsap', 'millsap',
+];
+
+const PACERS = [
+  'ind', 'pacers', 'indy', 'indianapolis', 'indiana', 'bird', 'larry bird',
+  'mccmillan', 'glenn', 'robinson', 'jefferson', 'big al',
+  'teague', 'monta', 'ellis', 'stuckey', 'rodney',
+  'thaddeus young', 'seraphin', 'aaron brooks', 'lavoy allen',
+  'lance', 'stephenson',
+  'oladipo', 'dipo', 'victor',
+];
+
+const PELICANS = [
+  'nop', 'pelicans', 'new orleans', 'PelicansNBA',
+  'cousins', 'boogie', 'demarcus', 'dmc',
+  'anthony davis', 'brow', 'davis',
+  'dmo', 'donatas',
+  'gentry', 'alvin',
+  'jrue', 'holiday',
+  'omer', 'asik',
+  'moore', 'e\'twaun',
+  'cunningham',
+  'solomon',
+  'jordan crawford',
+  'rondo', 'rajon',
+];
+
+const HORNETS = [
+  'cha', 'cho', 'hornets', 'charlotte', 'mj', 'michael jordan',
+  'kemba', 'walker', 'buzz city', 'mkg', 'gilchrist', 'kidd-gilchrist',
+  'cody zeller', 'lamb', 'jeremy lamb', 'kaminsky',  'miles',
+  'miles plumless', 'marvin', 'marvin williams', 'ramon', 'sessions', 'batum',
+  'nic', 'nicolas', 'brian roberts', 'roberts', 'christian wood', 'briante weber', 'weber',
+  'marco', 'belinelli', 'dell curry', 'steve clifford', 'clifford',
+  'dwight howard', 'dwight',
+  'mcw', 'carter', 'michael carter-williams',
+];
+
+const MAGIC = [
+  'orl', 'magic', 'orlando', 'OrlandoMagic', 'elfrid', 'payton',
+  'bismack', 'biyombo', 'fournier', 'aaron gordon', 'gordon',
+  'vogel', 'meeks', 'jodie', 'ross', 'terrence', 'wilcox',
+  'c.j. wilcox', 'cj wilcox', 'wilcox', 'watson', 'c.j. watson', 'cj watson',
+  'mario', 'hezonja', 'vucevic', 'zimmerman', 'rudez', 'damjan',
+  'speights', 'mo buckets',
+  'jonathon simmons',
+];
+
+const SUNS = [
+  'pho', 'suns', 'phoenix', 'devin booker',
+  'bledsoe', 'knight', 'ulis', 'chandler', 'booker',
+  'tyson chandler', 'nash', 'len', 'alex len',
+  'warren', 'tj warren', 't.j. warren', 'alan williams',
+  'dudley', 'jared dudley', 'bender', 'dragan', 'barbosa',
+  'leandro', 'maquese', 'chriss', 'tyler ulis', 'derrick jones',
+  'ronnie price', 'earl watson', 'watson', 'sarver', 'robert sarver',
+  'troy', 'daniels', 'josh jackson'
+];
+
+const SIXERS = [
+  'phi', 'sixers', '6ers', '76ers', 'philadelphia',
+  'philly', 'embiid', 'joel embiid', 'ben simmons',
+  'jahlil', 'okafor', 'dario', 'saric', 'dario saric',
+  'the process', 'brett brown', 'stauskas', 'sauce castillo',
+  'nik', 'brett', 'convington', 'robert convington',
+  'jerryd', 'bayless', 'shawn long', 'richaun holmes',
+  'justin anderson', 'mcconnell', 'tj mcconnell',
+  't.j. mcconnell', 'henderson', 'sam hinkie', 'hinkie',
+  'timothe', 'timcabs', 'luwawu', 'cabarrot', 'luwawu-cabarrot',
+  'jj', 'redick', 'reddick', 'j.j.',
+  'Markelle Fultz', 'Fultz', 'Markelle'
+];
+
+const NETS = [
+  'bkn', 'njn', 'nets', 'BrooklynNets', 'lin', 'linsanity',
+  'rhj', 'rondae', 'hollis-jefferson',
+  'kilpatrick', 'sean kilpatrick', 'trevor booker',
+  'foye', 'randy foye', 'whitehead', 'isaiah whitehead',
+  'nicholson', 'andrew nicholson', 'acy', 'quincy acy',
+  'spencer dinwiddie', 'dinwiddie', 'joe harris', 'caris levert',
+  'atkinson', 'levert',
+  'd\'angelo',  'dlo', 'mozgov',
+  'allen', 'crabbe',
+];
+
+const KINGS = [
+  'sac', 'kings', 'sacramento', 'SacramentoKings', 'sac town',
+  'sactown', 'rudy gay', 'willie', 'wcs',
+  'cauley-stein', 'arron afflalo', 'afflalo',
+  'buddy hield', 'hield', 'evans', 'tyreke',
+  'kosta', 'koufos',
+  'garrett', 'temple', 'tolliver', 'anthony tolliver',
+  'papagiannis', 'georgios', 'skal', 'labissiere',
+  'langston', 'galloway', 'ty', 'lawson', 'joerger',
+  'dave joerger', 'darren', 'collison', 'vivek',
+  'vince', 'carter', 'zach', 'randolph',
+  'zbo', 'z-bo', 'zach randolph',
+  'hill', 'george hill',
+];
+
+export const FEED_TYPE_CUSTOM_KEYWORDS = {
+
+  'atl': HAWKS,
+
+  'bos': CELTICS,
+
+  'bkn': NETS,
+
+  'cha': HORNETS,
+
+  'chi': BULLS,
+
+  'cle': CAVS,
+
+  'dal': MAVERICKS,
+
+  'den': NUGGETS,
+
+  'det': PISTONS,
+
+  'gsw': WARRIORS,
+
+  'hou': ROCKETS,
+
+  'ind': PACERS,
+
+  'lac': CLIPPERS,
+
+  'lal': LAKERS,
+
+  'mem': GRIZZLIES,
+
+  'mia': HEAT,
+
+  'mil': BUCKS,
+
+  'min': TIMBERWOLVES,
+
+  'nop': PELICANS,
+
+  'nyk': KNICKS,
+
+  'okc': THUNDER,
+
+  'orl': MAGIC,
+
+  'phi': SIXERS,
+
+  'phx': SUNS,
+
+  'por': BLAZERS,
+
+  'sac': KINGS,
+
+  'sas': SPURS,
+
+  'tor': RAPTORS,
+
+  'uta': JAZZ,
+
+  'was': WIZARDS,
+
+};
