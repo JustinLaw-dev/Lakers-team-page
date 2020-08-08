@@ -1,0 +1,113 @@
+.margin--top-med {
+  margin-top: 3rem;
+}
+
+.margin--top-small {
+  margin-top: 1rem;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Heebo", sans-serif;
+}
+
+.player__text {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding-top: 2rem;
+}
+
+.player__text span {
+  display: block;
+  font-weight: 500;
+  padding-top: 0.8rem;
+}
+
+button {
+  display: inline-block;
+  border: none;
+  text-decoration: none;
+  background: white;
+  color: black;
+  cursor: pointer;
+  text-align: center;
+  -webkit-transition: background 250ms ease-in-out, -webkit-transform 150ms ease;
+  transition: background 250ms ease-in-out, -webkit-transform 150ms ease;
+  transition: background 250ms ease-in-out, transform 150ms ease;
+  transition: background 250ms ease-in-out, transform 150ms ease, -webkit-transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+button:hover,
+button:focus {
+  background: purple;
+  color: white;
+}
+
+button:active {
+  -webkit-transform: scale(0.99);
+          transform: scale(0.99);
+}
+
+.row {
+  width: 100%;
+  height: 14rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 2px solid black;
+}
+
+.row .logo img {
+  height: 14rem;
+  width: 14rem;
+}
+
+.row .player {
+  text-align: center;
+  width: 12rem;
+  height: 14rem;
+  border-left: 2px solid black;
+}
+
+.row .player img {
+  height: 7rem;
+  width: 10rem;
+  padding-top: .8rem;
+}
+
+.row--body {
+  border-bottom: none;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.column {
+  margin-top: 2rem;
+  height: 80vh;
+}
+
+.column--1-of-4 {
+  width: 20%;
+  background-color: gold;
+}
+
+.column--2-of-4 {
+  width: 40%;
+  background-color: purple;
+}
+/*# sourceMappingURL=main.css.map */
