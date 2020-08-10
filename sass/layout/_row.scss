@@ -1,33 +1,30 @@
 .row {
-    width: 100%;
+  width: 100%;
+  height: 14rem;
+  display: flex;
+  border-bottom: 2px solid black;
+
+  & .player {
+    text-align: center;
+    width: 12rem;
     height: 14rem;
-    display:flex;
-    border-bottom: 2px solid black;
+    border-left: 2px solid black;
 
-    & .logo {
-
-        & img {
-            height: 14rem;
-            width: 14rem;
-        }
+    &__img {
+      height: 7rem;
+      width: 10rem;
+      padding-top: 0.8rem;
     }
+  }
 
-    & .player {
-        text-align: center;
-        width:12rem;
-        height: 14rem;
-        border-left: 2px solid black;
+  &--body {
+    border-bottom: none;
+    justify-content: space-around;
+  }
+}
 
-        & img {
-            height: 7rem;
-            width: 10rem;
-            padding-top: .8rem;
-        }   
-    }
-
-    &--body{
-        border-bottom: none;
-        justify-content:space-around;
-
-    }
+.logo__img {
+  text-align: center;
+  height: 12rem;
+  width: 12rem;
 }

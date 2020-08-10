@@ -6,20 +6,9 @@ button {
   color: black;
   cursor: pointer;
   text-align: center;
-  transition: background 250ms ease-in-out, transform 150ms ease;
-  -webkit-appearance: none;
-  -moz-appearance: none;
 }
 
-button:hover,
-button:focus {
+.selected {
   background: purple;
   color: white;
-}
-
-// button:focus {
-// }
-
-button:active {
-  transform: scale(0.99);
 }

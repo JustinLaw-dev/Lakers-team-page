@@ -1,13 +1,15 @@
 .column {
-    margin-top: 2rem;
-    height: 80vh;
-    &--1-of-4{
-        width:20%;
-        background-color: gold;
-    }
+  text-align: center;
+  margin-top: 2.5rem;
+  height: 80vh;
 
-    &--2-of-4 {
-        width:40%;
-        background-color: purple;
-    }
+  &--1-of-4 {
+    width: 15%;
+    background-color: gold;
+  }
+
+  &--2-of-4 {
+    width: 60%;
+    background-color: purple;
+  }
 }
