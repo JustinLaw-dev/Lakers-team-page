@@ -20,20 +20,7 @@ html {
 
 html {
   font-size: 62.5%;
-  font-family: "Heebo", sans-serif;
-}
-
-.player__text {
-  font-size: 1.4rem;
-  text-transform: uppercase;
-  font-weight: 700;
-  padding-top: 2rem;
-}
-
-.player__text span {
-  display: block;
-  font-weight: 500;
-  padding-top: 0.8rem;
+  font-family: 'Heebo', sans-serif;
 }
 
 button {
@@ -51,53 +38,62 @@ button {
   color: white;
 }
 
-.row {
+nav {
+  height: 8rem;
   width: 100%;
-  height: 14rem;
+}
+
+.navbar {
+  color: #ffffff;
+  list-style: none;
+  text-decoration: none;
+  text-transform: uppercase;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border-bottom: 2px solid black;
+  -webkit-box-flex: row;
+      -ms-flex: row;
+          flex: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.row .player {
-  text-align: center;
-  width: 12rem;
-  height: 14rem;
-  border-left: 2px solid black;
+.navbar__logo {
+  height: 8rem;
+  width: 8rem;
 }
 
-.row .player__img {
-  height: 7rem;
-  width: 10rem;
-  padding-top: 0.8rem;
+.navbar li {
+  font-size: 1.5rem;
+  margin-right: 2rem;
 }
 
-.row--body {
-  border-bottom: none;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+.navbar__social {
+  list-style: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inherit;
+  margin-left: auto;
 }
 
-.logo__img {
-  text-align: center;
-  height: 12rem;
-  width: 12rem;
+body {
+  background-color: #000000;
 }
 
-.column {
-  text-align: center;
-  margin-top: 2.5rem;
-  height: 80vh;
+.landing__composition--player {
+  width: 16%;
+  height: auto;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
 
-.column--1-of-4 {
-  width: 15%;
-  background-color: gold;
-}
-
-.column--2-of-4 {
-  width: 60%;
-  background-color: purple;
+.landing__composition--player:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
 }
 /*# sourceMappingURL=main.css.map */

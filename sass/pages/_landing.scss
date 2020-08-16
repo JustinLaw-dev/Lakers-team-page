@@ -1,0 +1,16 @@
+body {
+  background-color: $color-black;
+}
+
+.landing__composition {
+  &--player {
+    width: 16%;
+    height: auto;
+    transition: all 0.2s;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.02);
+    }
+  }
+}

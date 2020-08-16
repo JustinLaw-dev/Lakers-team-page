@@ -1,30 +1,30 @@
-.row {
-  width: 100%;
-  height: 14rem;
-  display: flex;
-  border-bottom: 2px solid black;
+// .row {
+//   width: 100%;
+//   height: 14rem;
+//   display: flex;
+//   border-bottom: 2px solid black;
 
-  & .player {
-    text-align: center;
-    width: 12rem;
-    height: 14rem;
-    border-left: 2px solid black;
+//   & .player {
+//     text-align: center;
+//     width: 12rem;
+//     height: 14rem;
+//     border-left: 2px solid black;
 
-    &__img {
-      height: 7rem;
-      width: 10rem;
-      padding-top: 0.8rem;
-    }
-  }
+//     &__img {
+//       height: 7rem;
+//       width: 10rem;
+//       padding-top: 0.8rem;
+//     }
+//   }
 
-  &--body {
-    border-bottom: none;
-    justify-content: space-around;
-  }
-}
+//   &--body {
+//     border-bottom: none;
+//     justify-content: space-around;
+//   }
+// }
 
-.logo__img {
-  text-align: center;
-  height: 12rem;
-  width: 12rem;
-}
+// .logo__img {
+//   text-align: center;
+//   height: 12rem;
+//   width: 12rem;
+// }
