@@ -3,3 +3,8 @@
   text-decoration: none;
   text-transform: uppercase;
 }
+
+@mixin bottomLeftAbsolute($bottom, $left) {
+  bottom: $bottom;
+  left: $left;
+}

@@ -3,14 +3,29 @@ body {
 }
 
 .landing__composition {
+  height: 92vh;
+  position: relative;
+
   &--player {
-    width: 16%;
-    height: auto;
+    position: absolute;
+    height: 55rem;
+    width: auto;
     transition: all 0.2s;
 
     &:hover {
       cursor: pointer;
       transform: scale(1.02);
+    }
+
+    &--kuzma {
+      z-index: 1000;
+      @include bottomLeftAbsolute(0, 0);
+    }
+
+    &--rondo {
+      height: 50rem;
+      z-index: 900;
+      @include bottomLeftAbsolute(0, 28rem);
     }
   }
 }

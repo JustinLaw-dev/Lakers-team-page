@@ -39,7 +39,7 @@ button {
 }
 
 nav {
-  height: 8rem;
+  height: 8vh;
   width: 100%;
 }
 
@@ -84,9 +84,15 @@ body {
   background-color: #000000;
 }
 
+.landing__composition {
+  height: 92vh;
+  position: relative;
+}
+
 .landing__composition--player {
-  width: 16%;
-  height: auto;
+  position: absolute;
+  height: 55rem;
+  width: auto;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
@@ -95,5 +101,18 @@ body {
   cursor: pointer;
   -webkit-transform: scale(1.02);
           transform: scale(1.02);
+}
+
+.landing__composition--player--kuzma {
+  z-index: 1000;
+  bottom: 0;
+  left: 0;
+}
+
+.landing__composition--player--rondo {
+  height: 50rem;
+  z-index: 900;
+  bottom: 0;
+  left: 28rem;
 }
 /*# sourceMappingURL=main.css.map */

@@ -12,12 +12,26 @@
 // players.forEach((player) => {
 //   player.addEventListener('click', clickHandler);
 // });
-const player = document.querySelector('.landing__composition--player');
 
-player.onmouseover = function () {
-  player.setAttribute('src', './img/kuz outline.png');
-};
+//TODO: make player img ID the same as link to image. Then use back
+//ticks to create a string with ${this.id} so you can use one logic
+// to apply to all
+const players = document.querySelectorAll('.landing__composition--player');
 
-player.onmouseout = function () {
-  player.setAttribute('src', './img/kuz.png');
-};
+function enterHandler() {
+  this.setAttribute('src', `./img/${this.id} outline.png`);
+  // player.setAttribute('src', './img/kuz outline.png');
+}
+
+function leaveHandler() {
+  this.setAttribute('src', `./img/${this.id}.png`);
+}
+
+players.forEach((player) => {
+  player.addEventListener('mouseenter', enterHandler);
+  player.addEventListener('mouseleave', leaveHandler);
+});
+
+// player.onmouseout = function () {
+//   player.setAttribute('src', './img/kuz.png');
+// };
