@@ -20,94 +20,132 @@ html {
 
 html {
   font-size: 62.5%;
-  font-family: "Heebo", sans-serif;
+  font-family: 'Heebo', sans-serif;
 }
 
-.player__text {
-  font-size: 1.4rem;
-  text-transform: uppercase;
-  font-weight: 700;
-  padding-top: 2rem;
-}
-
-.player__text span {
-  display: block;
-  font-weight: 500;
-  padding-top: 0.8rem;
-}
-
-button {
-  display: inline-block;
-  border: none;
-  text-decoration: none;
-  background: white;
-  color: black;
-  cursor: pointer;
-  text-align: center;
-  -webkit-transition: background 250ms ease-in-out, -webkit-transform 150ms ease;
-  transition: background 250ms ease-in-out, -webkit-transform 150ms ease;
-  transition: background 250ms ease-in-out, transform 150ms ease;
-  transition: background 250ms ease-in-out, transform 150ms ease, -webkit-transform 150ms ease;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-}
-
-button:hover,
-button:focus {
-  background: purple;
-  color: white;
-}
-
-button:active {
-  -webkit-transform: scale(0.99);
-          transform: scale(0.99);
-}
-
-.row {
+nav {
+  height: 8vh;
   width: 100%;
-  height: 14rem;
+}
+
+.navbar {
+  color: #ffffff;
+  list-style: none;
+  text-decoration: none;
+  text-transform: uppercase;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border-bottom: 2px solid black;
+  -webkit-box-flex: row;
+      -ms-flex: row;
+          flex: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.row .logo img {
-  height: 14rem;
-  width: 14rem;
+.navbar__logo {
+  height: 8rem;
+  width: 8rem;
 }
 
-.row .player {
-  text-align: center;
-  width: 12rem;
-  height: 14rem;
-  border-left: 2px solid black;
+.navbar li {
+  font-size: 1.5rem;
+  margin-right: 2rem;
 }
 
-.row .player img {
-  height: 7rem;
-  width: 10rem;
-  padding-top: .8rem;
+.navbar__social {
+  list-style: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inherit;
+  margin-left: auto;
 }
 
-.row--body {
-  border-bottom: none;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+body {
+  background-color: #000000;
+  overflow: hidden;
 }
 
-.column {
-  margin-top: 2rem;
-  height: 80vh;
+.landing__composition {
+  height: 92vh;
+  position: relative;
 }
 
-.column--1-of-4 {
-  width: 20%;
-  background-color: gold;
+.landing__composition--player {
+  position: absolute;
+  height: 55rem;
+  width: auto;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
 
-.column--2-of-4 {
-  width: 40%;
-  background-color: purple;
+.landing__composition--player:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+.landing__composition--player--kuzma {
+  z-index: 1000;
+  bottom: 0;
+  left: 40rem;
+  z-index: 1000;
+}
+
+.landing__composition--player--rondo {
+  height: 50rem;
+  bottom: 0;
+  left: 25rem;
+  z-index: 900;
+}
+
+.landing__composition--player--lebron {
+  bottom: 0;
+  left: 70rem;
+  z-index: 1000;
+}
+
+.landing__composition--player--davis {
+  bottom: 0;
+  right: 58rem;
+  z-index: 900;
+}
+
+.landing__composition--player--caruso {
+  height: 53rem;
+  bottom: 0;
+  right: 30rem;
+  z-index: 800;
+}
+
+.landing__composition--player--mcgee {
+  height: 57rem;
+  bottom: 0;
+  right: 0;
+  z-index: 900;
+}
+
+.landing__composition--player--waiters {
+  height: 50rem;
+  bottom: 25rem;
+  right: 0rem;
+  z-index: 700;
+}
+
+.landing__composition--player--bradley {
+  bottom: 0;
+  left: -10rem;
+  z-index: 1000;
+}
+
+.landing__composition--player--green {
+  height: 50rem;
+  bottom: 20rem;
+  left: 10rem;
+  z-index: 800;
 }
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,63 @@
+body {
+  background-color: $color-black;
+  overflow: hidden;
+}
+
+.landing__composition {
+  height: 92vh;
+  position: relative;
+
+  &--player {
+    position: absolute;
+    height: 55rem;
+    width: auto;
+    transition: all 0.2s;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.02);
+    }
+
+    &--kuzma {
+      z-index: 1000;
+      @include bottomLeftAbsolute(0, 40rem, 1000);
+    }
+
+    &--rondo {
+      height: 50rem;
+      @include bottomLeftAbsolute(0, 25rem, 900);
+    }
+
+    &--lebron {
+      @include bottomLeftAbsolute(0, 70rem, 1000);
+    }
+
+    &--davis {
+      @include bottomRightAbsolute(0, 58rem, 900);
+    }
+
+    &--caruso {
+      height: 53rem;
+      @include bottomRightAbsolute(0, 30rem, 800);
+    }
+
+    &--mcgee {
+      height: 57rem;
+      @include bottomRightAbsolute(0, 0, 900);
+    }
+
+    &--waiters {
+      height: 50rem;
+      @include bottomRightAbsolute(25rem, 0rem, 700);
+    }
+
+    &--bradley {
+      @include bottomLeftAbsolute(0, -10rem, 1000);
+    }
+
+    &--green {
+      height: 50rem;
+      @include bottomLeftAbsolute(20rem, 10rem, 800);
+    }
+  }
+}
