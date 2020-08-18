@@ -23,21 +23,6 @@ html {
   font-family: 'Heebo', sans-serif;
 }
 
-button {
-  display: inline-block;
-  border: none;
-  text-decoration: none;
-  background: white;
-  color: black;
-  cursor: pointer;
-  text-align: center;
-}
-
-.selected {
-  background: purple;
-  color: white;
-}
-
 nav {
   height: 8vh;
   width: 100%;
