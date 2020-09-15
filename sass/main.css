@@ -144,8 +144,36 @@ body {
 
 .landing__composition--player--green {
   height: 50rem;
+  bottom: 22rem;
+  right: 68rem;
+  z-index: 700;
+}
+
+.landing__composition--player--howard {
+  height: 52rem;
+  bottom: 26rem;
+  right: 31rem;
+  z-index: 600;
+}
+
+.landing__composition--player--dudley {
+  height: 50rem;
   bottom: 20rem;
-  left: 10rem;
+  left: 35rem;
+  z-index: 800;
+}
+
+.landing__composition--player--pope {
+  height: 50rem;
+  bottom: 20rem;
+  left: 60rem;
+  z-index: 800;
+}
+
+.landing__composition--player--smith {
+  height: 50rem;
+  bottom: 23rem;
+  left: 0;
   z-index: 800;
 }
 /*# sourceMappingURL=main.css.map */
