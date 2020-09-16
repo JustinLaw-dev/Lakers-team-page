@@ -57,7 +57,23 @@ body {
 
     &--green {
       height: 50rem;
-      @include bottomLeftAbsolute(20rem, 10rem, 800);
+      @include bottomRightAbsolute(22rem, 68rem, 700);
+    }
+    &--howard {
+      height: 52rem;
+      @include bottomRightAbsolute(26rem, 31rem, 600);
+    }
+    &--dudley {
+      height: 50rem;
+      @include bottomLeftAbsolute(20rem, 35rem, 800);
+    }
+    &--pope {
+      height: 50rem;
+      @include bottomLeftAbsolute(20rem, 60rem, 800);
+    }
+    &--smith {
+      height: 50rem;
+      @include bottomLeftAbsolute(23rem, 0, 800);
     }
   }
 }
