@@ -8,6 +8,7 @@ body {
   position: relative;
 
   &--player {
+    display: block;
     position: absolute;
     height: 55rem;
     width: auto;

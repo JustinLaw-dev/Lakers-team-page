@@ -12,10 +12,16 @@ function leaveHandler() {
   this.setAttribute('src', `./img/${this.id}.png`);
 }
 
-function showStats() {}
+function showStats(e) {
+  players.forEach((player) => {
+    if (e.currentTarget.alt != player.alt) {
+      player.style.opacity = 0;
+    }
+  });
+}
 
 players.forEach((player) => {
   player.addEventListener('mouseenter', enterHandler);
   player.addEventListener('mouseleave', leaveHandler);
-  player.addEventListener('onclick', showStats);
+  player.addEventListener('click', showStats);
 });
