@@ -82,8 +82,8 @@ body {
 .table__container {
   width: 70%;
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 10%;
+  right: 7%;
 
   & thead,
   tbody {
@@ -102,10 +102,19 @@ body {
   }
 
   & td:nth-child(1) {
-    width: 10%;
+    width: 2.4rem;
+  }
+
+  & th:nth-child(2) {
+    width: 1.95rem;
   }
 
   & td:nth-child(3) {
-    width: 30%;
+    width: 1rem;
+    color: red;
+  }
+
+  & th:nth-child(3) {
+    width: 5.3rem;
   }
 }

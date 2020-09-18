@@ -70,7 +70,7 @@ function showStats(e) {
           .text(function (d) {
             return d;
           })
-          .style('font-size', '12px');
+          .style('font-size', '1rem');
       });
     }
   });

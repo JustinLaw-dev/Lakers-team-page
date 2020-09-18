@@ -181,8 +181,8 @@ body {
 .table__container {
   width: 70%;
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 10%;
+  right: 7%;
 }
 
 .table__container thead,
@@ -205,10 +205,19 @@ body {
 }
 
 .table__container td:nth-child(1) {
-  width: 10%;
+  width: 2.4rem;
+}
+
+.table__container th:nth-child(2) {
+  width: 1.95rem;
 }
 
 .table__container td:nth-child(3) {
-  width: 30%;
+  width: 1rem;
+  color: red;
+}
+
+.table__container th:nth-child(3) {
+  width: 5.3rem;
 }
 /*# sourceMappingURL=main.css.map */
