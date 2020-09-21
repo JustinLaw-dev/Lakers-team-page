@@ -58,7 +58,9 @@ function showStats(e) {
           })
           .enter()
           .append('td')
-          .style('border', '1px black solid')
+          // .style('border', '1px black solid')
+          .style('border-top', '1px black solid')
+          .style('border-bottom', '1px black solid')
           .style('padding', '5px')
           .style('background-color', 'white')
           // .on('mouseover', function () {
@@ -70,7 +72,7 @@ function showStats(e) {
           .text(function (d) {
             return d;
           })
-          .style('font-size', '12px');
+          .style('font-size', '1rem');
       });
     }
   });
