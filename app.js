@@ -20,6 +20,7 @@ function showStats(e) {
     }
     if (e.currentTarget.alt === player.alt) {
       console.log('1');
+
       d3.text('AB_data.csv').then(function (datasetText) {
         var rows = d3.csvParseRows(datasetText),
           table = d3
@@ -28,7 +29,14 @@ function showStats(e) {
             .style('border-collapse', 'collapse')
             .style('border', '2px black solid');
 
-        // headers
+        //Create tooltip
+        let toolTip = d3
+          .select('#tableContainer')
+          .append('div')
+          .attr('class', 'tooltip')
+          .style('opacity', 0);
+
+        //Render headers
         table
           .append('thead')
           .append('tr')
@@ -73,6 +81,21 @@ function showStats(e) {
             return d;
           })
           .style('font-size', '1rem');
+
+        // table.selectAll('th').style('background-color', 'blue');
+        table
+          .selectAll('th')
+          // Tooltip
+          .on('mousemove', function (d) {
+            toolTip.transition().duration(300).style('opacity', 0.9);
+            toolTip
+              .html('Hello Avery Bradley')
+              .style('left', d.pageX - 325 + 'px')
+              .style('top', d.pageY - 170 + 'px');
+          })
+          .on('mouseout', function (d) {
+            toolTip.transition().duration(200).style('opacity', 0);
+          });
       });
     }
   });
