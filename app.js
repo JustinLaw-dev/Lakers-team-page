@@ -86,10 +86,16 @@ function showStats(e) {
         table
           .selectAll('th')
           // Tooltip
-          .on('mousemove', function (d) {
+          .on('mouseenter', function (d) {
             toolTip.transition().duration(300).style('opacity', 0.9);
+            //TODO
+            // USE if or switch statement to display certain tooltips based on field!!
+            if (d.currentTarget.textContent === 'Rk') {
+              console.log('true');
+              toolTip.html('Rank');
+            } else console.log('false');
+
             toolTip
-              .html('Hello Avery Bradley')
               .style('left', d.pageX - 325 + 'px')
               .style('top', d.pageY - 170 + 'px');
           })
