@@ -13,6 +13,7 @@ function leaveHandler() {
 }
 
 function showStats(e) {
+  //show back arrow
   players.forEach((player) => {
     if (e.currentTarget.alt != player.alt) {
       // player.style.opacity = 0;
@@ -88,19 +89,112 @@ function showStats(e) {
           // Tooltip
           .on('mouseenter', function (d) {
             toolTip.transition().duration(300).style('opacity', 0.9);
-            //TODO
-            // USE if or switch statement to display certain tooltips based on field!!
-            if (d.currentTarget.textContent === 'Rk') {
-              console.log('true');
-              toolTip.html('Rank');
-            } else console.log('false');
+
+            // Render tool tip text content based on hover selection
+            switch (d.currentTarget.textContent) {
+              case 'Rk':
+                toolTip.html('Rank');
+                break;
+              case 'G':
+                toolTip.html('Season Game');
+                break;
+              case 'Date':
+                toolTip.html('Date');
+                break;
+              case 'Age':
+                toolTip.html('Age - Years & Days');
+                break;
+              case 'Tm':
+                toolTip.html('Team');
+                break;
+              case 'Opp':
+                toolTip.html('Opponent');
+                break;
+              case 'GS':
+                toolTip.html('Games Started');
+                break;
+              case 'MP':
+                toolTip.html('Minutes Played');
+                break;
+              case 'FG':
+                toolTip.html('Field Goals');
+                break;
+              case 'FGA':
+                toolTip.html('Field Goal Attempts');
+                break;
+              case 'FG%':
+                toolTip.html('Field Goal Percentage');
+                break;
+              case '3P':
+                toolTip.html('3-Point Field Goals');
+                break;
+              case '3PA':
+                toolTip.html('3-Point Field Goal Attempts');
+                break;
+              case '3P%':
+                toolTip.html('3-Point Field Goal Percentage');
+                break;
+              case 'FT':
+                toolTip.html('Free Throws');
+                break;
+              case 'FTA':
+                toolTip.html('Free Throw Attempts');
+                break;
+              case 'FT%':
+                toolTip.html('Free Throw Percentage');
+                break;
+              case 'ORB':
+                toolTip.html('Offensive Rebounds');
+                break;
+              case 'DRB':
+                toolTip.html('Defensive Rebounds');
+                break;
+              case 'TRB':
+                toolTip.html('Total Rebounds');
+                break;
+              case 'AST':
+                toolTip.html('Assists');
+                break;
+              case 'STL':
+                toolTip.html('Steals');
+                break;
+              case 'BLK':
+                toolTip.html('Blocks');
+                break;
+              case 'TOV':
+                toolTip.html('Turnovers');
+                break;
+              case 'PF':
+                toolTip.html('Personal Fouls');
+                break;
+              case 'PTS':
+                toolTip.html('Points');
+                break;
+              case 'GmSc':
+                toolTip.html('Game Score');
+                break;
+              case '+/-':
+                toolTip.html('Plus/Minus');
+                break;
+              //Hide tooltip for unnamed boxes 5 & 7
+              default:
+                toolTip.style('display', 'none');
+            }
 
             toolTip
               .style('left', d.pageX - 325 + 'px')
               .style('top', d.pageY - 170 + 'px');
           })
           .on('mouseout', function (d) {
+            //
             toolTip.transition().duration(200).style('opacity', 0);
+            //Display tool tip after leaving unnamed boxes 5 & 7
+            if (
+              d.currentTarget.textContent === 'Unnamed: 5' ||
+              d.currentTarget.textContent === 'Unnamed: 7'
+            ) {
+              toolTip.style('display', 'block');
+            }
           });
       });
     }

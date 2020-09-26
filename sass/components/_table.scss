@@ -87,11 +87,12 @@ table {
 .tooltip {
   position: absolute;
   text-align: center;
-  width: 60px;
-  height: 28px;
-  padding: 2px;
-  font: 12px sans-serif;
-  background: lightsteelblue;
+  min-width: 6rem;
+  width: auto;
+  height: auto;
+  font-size: 1.2rem;
+  padding: 5px;
+  background: rgba(236, 173, 24, 2);
   border: 0px;
   border-radius: 8px;
   pointer-events: none;
