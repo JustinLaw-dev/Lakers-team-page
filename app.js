@@ -13,6 +13,7 @@ function leaveHandler() {
 }
 
 function showStats(e) {
+  //show back arrow
   players.forEach((player) => {
     if (e.currentTarget.alt != player.alt) {
       // player.style.opacity = 0;

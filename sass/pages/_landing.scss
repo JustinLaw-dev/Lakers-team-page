@@ -3,6 +3,15 @@ body {
   overflow: hidden;
 }
 
+.landing__player-name {
+  position: absolute;
+
+  @include bottomLeftAbsolute(60rem, 10rem, 1000);
+  font-size: 1.7rem;
+  color: $color-white;
+  text-transform: uppercase;
+}
+
 .landing__composition {
   height: 92vh;
   position: relative;

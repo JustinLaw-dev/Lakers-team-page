@@ -171,6 +171,16 @@ body {
   overflow: hidden;
 }
 
+.landing__player-name {
+  position: absolute;
+  bottom: 60rem;
+  left: 10rem;
+  z-index: 1000;
+  font-size: 1.7rem;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
 .landing__composition {
   height: 92vh;
   position: relative;
