@@ -1,8 +1,6 @@
-//TODO: make player img ID the same as link to image. Then use back
-//ticks to create a string with ${this.id} so you can use one logic
-// to apply to all
-//done
 const players = document.querySelectorAll('.landing__composition--player');
+const backArrow = document.querySelector('.landing__back-arrow');
+const playerHeading = document.querySelector('.landing__player-name');
 
 function enterHandler() {
   this.setAttribute('src', `./img/${this.id} outline.png`);
@@ -20,6 +18,9 @@ function showStats(e) {
       player.style.display = 'none';
     }
     if (e.currentTarget.alt === player.alt) {
+      backArrow.style.opacity = 1;
+      playerHeading.style.opacity = 1;
+      playerHeading.textContent = e.currentTarget.alt;
       // prettier-ignore
       let dataID = e.currentTarget.dataset.id;
 
@@ -68,7 +69,6 @@ function showStats(e) {
           })
           .enter()
           .append('td')
-          // .style('border', '1px black solid')
           .style('border-top', '1px black solid')
           .style('border-bottom', '1px black solid')
           .style('padding', '5px')
