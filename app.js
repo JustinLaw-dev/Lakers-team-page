@@ -22,7 +22,7 @@ function showStats(e) {
     if (e.currentTarget.alt === player.alt) {
       console.log('1');
 
-      d3.text('AB_data.csv').then(function (datasetText) {
+      d3.text('./data/python/AB_data.csv').then(function (datasetText) {
         var rows = d3.csvParseRows(datasetText),
           table = d3
             .select('#tableContainer')
