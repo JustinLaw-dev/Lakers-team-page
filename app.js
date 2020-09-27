@@ -20,9 +20,10 @@ function showStats(e) {
       player.style.display = 'none';
     }
     if (e.currentTarget.alt === player.alt) {
-      console.log('1');
+      // prettier-ignore
+      let dataID = e.currentTarget.dataset.id;
 
-      d3.text('./data/python/AB_data.csv').then(function (datasetText) {
+      d3.text(`./data/python/${dataID}_data.csv`).then(function (datasetText) {
         var rows = d3.csvParseRows(datasetText),
           table = d3
             .select('#tableContainer')
