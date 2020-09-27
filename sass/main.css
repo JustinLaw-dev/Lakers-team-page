@@ -181,6 +181,13 @@ body {
   text-transform: uppercase;
 }
 
+.landing__back-arrow {
+  position: absolute;
+  color: #ffffff;
+  top: 10%;
+  left: 0;
+}
+
 .landing__composition {
   height: 92vh;
   position: relative;
