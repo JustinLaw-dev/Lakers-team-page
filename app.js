@@ -15,7 +15,8 @@ function showStats(e) {
   players.forEach((player) => {
     if (e.currentTarget.alt != player.alt) {
       // player.style.opacity = 0;
-      player.style.display = 'none';
+      player.style.opacity = 0;
+      player.style.pointerEvents = 'none';
     }
     if (e.currentTarget.alt === player.alt) {
       backArrow.style.opacity = 1;
