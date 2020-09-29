@@ -206,8 +206,23 @@ function showStats(e) {
   });
 }
 
+function resetPage() {
+  console.log('clicked');
+
+  players.forEach((player) => {
+    player.style.opacity = 1;
+    player.style.pointerEvents = 'auto';
+    backArrow.style.opacity = 0;
+    playerHeading.style.opacity = 0;
+
+    d3.selectAll('table').remove();
+  });
+}
+
 players.forEach((player) => {
   player.addEventListener('mouseenter', enterHandler);
   player.addEventListener('mouseleave', leaveHandler);
   player.addEventListener('click', showStats);
 });
+
+backArrow.addEventListener('click', resetPage);
