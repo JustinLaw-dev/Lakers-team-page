@@ -1,7 +1,8 @@
 const players = document.querySelectorAll('.landing__composition--player');
 const backArrow = document.querySelector('.landing__back-arrow');
 const playerHeading = document.querySelector('.landing__player-name');
-let originalPosition;
+let initialPlayerX;
+let initialPlayerY;
 
 function enterHandler() {
   this.setAttribute('src', `./img/${this.id} outline.png`);
@@ -12,10 +13,8 @@ function leaveHandler() {
 }
 
 function showStats(e) {
-  //show back arrow
   players.forEach((player) => {
     if (e.currentTarget.alt != player.alt) {
-      // player.style.opacity = 0;
       player.style.opacity = 0;
       player.style.pointerEvents = 'none';
     }
@@ -23,9 +22,12 @@ function showStats(e) {
       backArrow.style.opacity = 1;
       playerHeading.style.opacity = 1;
       playerHeading.textContent = e.currentTarget.alt;
+
       // prettier-ignore
       let dataID = e.currentTarget.dataset.id;
 
+      //Parse data for table, from CSV
+      //Then Begin rendering table
       d3.text(`./data/python/${dataID}_data.csv`).then(function (datasetText) {
         var rows = d3.csvParseRows(datasetText),
           table = d3
