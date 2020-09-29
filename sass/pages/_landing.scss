@@ -46,60 +46,60 @@ body {
 
     &--kuzma {
       z-index: 1000;
-      @include bottomLeftAbsolute(0, 40rem, 1000);
+      @include bottomLeftAbsolute(0, 21%, 1000);
     }
 
     &--rondo {
       height: 50rem;
-      @include bottomLeftAbsolute(0, 25rem, 900);
+      @include bottomLeftAbsolute(0, 12%, 900);
     }
 
     &--lebron {
-      @include bottomLeftAbsolute(0, 70rem, 1000);
+      @include bottomLeftAbsolute(0, 37%, 1000);
     }
 
     &--davis {
-      @include bottomRightAbsolute(0, 58rem, 900);
+      @include bottomLeftAbsolute(0, 50%, 900);
     }
 
     &--caruso {
       height: 53rem;
-      @include bottomRightAbsolute(0, 30rem, 800);
+      @include bottomLeftAbsolute(0, 67%, 800);
     }
 
     &--mcgee {
       height: 57rem;
-      @include bottomRightAbsolute(0, 0, 900);
+      @include bottomLeftAbsolute(0, 78%, 900);
     }
 
     &--waiters {
       height: 50rem;
-      @include bottomRightAbsolute(25rem, 0rem, 700);
+      @include bottomLeftAbsolute(25rem, 79%, 700);
     }
 
     &--bradley {
-      @include bottomLeftAbsolute(0, -10rem, 1000);
+      @include bottomLeftAbsolute(0, -5%, 1000);
     }
 
     &--green {
       height: 50rem;
-      @include bottomRightAbsolute(22rem, 68rem, 700);
+      @include bottomLeftAbsolute(22rem, 50%, 700);
     }
     &--howard {
       height: 52rem;
-      @include bottomRightAbsolute(26rem, 31rem, 600);
+      @include bottomLeftAbsolute(26rem, 62%, 600);
     }
     &--dudley {
       height: 50rem;
-      @include bottomLeftAbsolute(20rem, 35rem, 800);
+      @include bottomLeftAbsolute(20rem, 17%, 800);
     }
     &--pope {
       height: 50rem;
-      @include bottomLeftAbsolute(20rem, 60rem, 800);
+      @include bottomLeftAbsolute(20rem, 29%, 800);
     }
     &--smith {
       height: 50rem;
-      @include bottomLeftAbsolute(23rem, 0, 800);
+      @include bottomLeftAbsolute(23rem, -3%, 800);
     }
   }
 }

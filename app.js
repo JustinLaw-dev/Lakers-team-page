@@ -1,6 +1,7 @@
 const players = document.querySelectorAll('.landing__composition--player');
 const backArrow = document.querySelector('.landing__back-arrow');
 const playerHeading = document.querySelector('.landing__player-name');
+let originalPosition;
 
 function enterHandler() {
   this.setAttribute('src', `./img/${this.id} outline.png`);

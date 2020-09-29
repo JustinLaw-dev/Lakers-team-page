@@ -69,7 +69,7 @@ table {
 }
 
 .table__container th:nth-child(2) {
-  width: 2.35rem !important;
+  width: 2.25rem !important;
 }
 
 .table__container th:nth-child(3) {
@@ -219,88 +219,88 @@ body {
 .landing__composition--player--kuzma {
   z-index: 1000;
   bottom: 0;
-  left: 40rem;
+  left: 21%;
   z-index: 1000;
 }
 
 .landing__composition--player--rondo {
   height: 50rem;
   bottom: 0;
-  left: 25rem;
+  left: 12%;
   z-index: 900;
 }
 
 .landing__composition--player--lebron {
   bottom: 0;
-  left: 70rem;
+  left: 37%;
   z-index: 1000;
 }
 
 .landing__composition--player--davis {
   bottom: 0;
-  right: 58rem;
+  left: 50%;
   z-index: 900;
 }
 
 .landing__composition--player--caruso {
   height: 53rem;
   bottom: 0;
-  right: 30rem;
+  left: 67%;
   z-index: 800;
 }
 
 .landing__composition--player--mcgee {
   height: 57rem;
   bottom: 0;
-  right: 0;
+  left: 78%;
   z-index: 900;
 }
 
 .landing__composition--player--waiters {
   height: 50rem;
   bottom: 25rem;
-  right: 0rem;
+  left: 79%;
   z-index: 700;
 }
 
 .landing__composition--player--bradley {
   bottom: 0;
-  left: -10rem;
+  left: -5%;
   z-index: 1000;
 }
 
 .landing__composition--player--green {
   height: 50rem;
   bottom: 22rem;
-  right: 68rem;
+  left: 50%;
   z-index: 700;
 }
 
 .landing__composition--player--howard {
   height: 52rem;
   bottom: 26rem;
-  right: 31rem;
+  left: 62%;
   z-index: 600;
 }
 
 .landing__composition--player--dudley {
   height: 50rem;
   bottom: 20rem;
-  left: 35rem;
+  left: 17%;
   z-index: 800;
 }
 
 .landing__composition--player--pope {
   height: 50rem;
   bottom: 20rem;
-  left: 60rem;
+  left: 29%;
   z-index: 800;
 }
 
 .landing__composition--player--smith {
   height: 50rem;
   bottom: 23rem;
-  left: 0;
+  left: -3%;
   z-index: 800;
 }
 /*# sourceMappingURL=main.css.map */
