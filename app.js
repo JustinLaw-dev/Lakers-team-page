@@ -202,6 +202,7 @@ function showStats(e) {
             }
           });
       });
+      player.removeEventListener('click', showStats);
     }
   });
 }
@@ -216,9 +217,12 @@ function resetPage() {
     playerHeading.style.opacity = 0;
 
     d3.selectAll('table').remove();
+    //Re-Add event listener
+    player.addEventListener('click', showStats);
   });
 }
 
+//Initial state event listeners. Click -> remove listener, add upon pressing reset page.
 players.forEach((player) => {
   player.addEventListener('mouseenter', enterHandler);
   player.addEventListener('mouseleave', leaveHandler);
