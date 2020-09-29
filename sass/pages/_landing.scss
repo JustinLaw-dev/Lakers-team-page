@@ -17,13 +17,25 @@ body {
 
 .landing__back-arrow {
   position: absolute;
-  color: $color-white;
+  color: $color-black;
+  font-size: 2rem;
+  background-color: $color-white;
+  border-radius: 50%;
+  text-align: center;
+  width: 3rem;
+  height: 3rem;
   top: 10%;
-  left: 0;
+  left: 5%;
+  z-index: 9999;
 
   opacity: 0;
   transition: all 0.2s;
   cursor: pointer;
+  pointer-events: auto;
+
+  &:hover {
+    background-color: rgb(112, 117, 122);
+  }
 }
 
 .landing__composition {
@@ -78,7 +90,7 @@ body {
     }
 
     &--bradley {
-      @include bottomLeftAbsolute(0, -5%, 1000);
+      @include bottomLeftAbsolute(0, -7%, 1000);
     }
 
     &--green {

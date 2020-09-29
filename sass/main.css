@@ -186,13 +186,25 @@ body {
 
 .landing__back-arrow {
   position: absolute;
-  color: #ffffff;
+  color: #000000;
+  font-size: 2rem;
+  background-color: #ffffff;
+  border-radius: 50%;
+  text-align: center;
+  width: 3rem;
+  height: 3rem;
   top: 10%;
-  left: 0;
+  left: 5%;
+  z-index: 9999;
   opacity: 0;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   cursor: pointer;
+  pointer-events: auto;
+}
+
+.landing__back-arrow:hover {
+  background-color: #70757a;
 }
 
 .landing__composition {
@@ -265,7 +277,7 @@ body {
 
 .landing__composition--player--bradley {
   bottom: 0;
-  left: -5%;
+  left: -7%;
   z-index: 1000;
 }
 
