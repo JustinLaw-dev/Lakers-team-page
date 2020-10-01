@@ -19,6 +19,11 @@ function showStats(e) {
       player.style.pointerEvents = 'none';
     }
     if (e.currentTarget.alt === player.alt) {
+      // initialPlayerX = `${(e.currentTarget.offsetLeft / 1920) * 100}%`;
+      // initialPlayerY = `${(e.currentTarget.offsetBottom / 1080) * 100}%`;
+      // console.log(initialPlayerX, initialPlayerY);
+      document.getElementById('myDIV').style.bottom = '100px';
+
       backArrow.style.opacity = 1;
       playerHeading.style.opacity = 1;
       playerHeading.textContent = e.currentTarget.alt;
@@ -208,8 +213,6 @@ function showStats(e) {
 }
 
 function resetPage() {
-  console.log('clicked');
-
   players.forEach((player) => {
     player.style.opacity = 1;
     player.style.pointerEvents = 'auto';
