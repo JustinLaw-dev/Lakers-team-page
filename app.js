@@ -3,6 +3,7 @@ const backArrow = document.querySelector('.landing__back-arrow');
 const playerHeading = document.querySelector('.landing__player-name');
 let initialPlayerX;
 let initialPlayerY;
+let selectedPlayer;
 
 function enterHandler() {
   this.setAttribute('src', `./img/${this.id} outline.png`);
@@ -19,10 +20,25 @@ function showStats(e) {
       player.style.pointerEvents = 'none';
     }
     if (e.currentTarget.alt === player.alt) {
-      // initialPlayerX = `${(e.currentTarget.offsetLeft / 1920) * 100}%`;
-      // initialPlayerY = `${(e.currentTarget.offsetBottom / 1080) * 100}%`;
-      // console.log(initialPlayerX, initialPlayerY);
-      document.getElementById('myDIV').style.bottom = '100px';
+      selectedPlayer = e.currentTarget;
+      initialPlayerX = `${(e.currentTarget.offsetLeft / 1920) * 100}%`;
+      //switch case for bottom row vs mid row of players Y position
+      // bottom row" AB RONDO KUZ BRON AD JAVALE CARUSO
+      switch (selectedPlayer.alt) {
+        case 'Avery Bradley':
+        case 'Rajon Rondo':
+        case 'Kyle Kuzma':
+        case 'Lebron James':
+        case 'Anthony Davis':
+        case 'Javale McGee':
+        case 'Alex Caruso':
+          initialPlayerY = '0%';
+          break;
+      }
+
+      console.log(initialPlayerX, initialPlayerY);
+      e.currentTarget.style.bottom = '0%';
+      e.currentTarget.style.left = '-4%';
 
       backArrow.style.opacity = 1;
       playerHeading.style.opacity = 1;
@@ -220,9 +236,15 @@ function resetPage() {
     playerHeading.style.opacity = 0;
 
     d3.selectAll('table').remove();
+
     //Re-Add event listener
     player.addEventListener('click', showStats);
   });
+
+  // use below for moving player back to original location using initalplayerX and initialplayerY
+  // console.log(selectedPlayer.id);
+  selectedPlayer.style.bottom = initialPlayerY;
+  selectedPlayer.style.left = initialPlayerX;
 }
 
 //Initial state event listeners. Click -> remove listener, add upon pressing reset page.
