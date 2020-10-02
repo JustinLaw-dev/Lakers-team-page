@@ -21,9 +21,12 @@ function showStats(e) {
     }
     if (e.currentTarget.alt === player.alt) {
       selectedPlayer = e.currentTarget;
+
+      //Mark selected player's initial position styling
       initialPlayerX = `${(e.currentTarget.offsetLeft / 1920) * 100}%`;
       //switch case for bottom row vs mid row of players Y position
       // bottom row" AB RONDO KUZ BRON AD JAVALE CARUSO
+      //jr smith dudley kcp dg dwight dion
       switch (selectedPlayer.alt) {
         case 'Avery Bradley':
         case 'Rajon Rondo':
@@ -33,6 +36,14 @@ function showStats(e) {
         case 'Javale McGee':
         case 'Alex Caruso':
           initialPlayerY = '0%';
+          break;
+        case 'JR Smith':
+        case 'Jared Dudley':
+        case 'Kentavious Caldwell-Pope':
+        case 'Danny Green':
+        case 'Dwight Howard':
+        case 'Dion Waiters':
+          initialPlayerY = '20rem';
           break;
       }
 
@@ -241,8 +252,7 @@ function resetPage() {
     player.addEventListener('click', showStats);
   });
 
-  // use below for moving player back to original location using initalplayerX and initialplayerY
-  // console.log(selectedPlayer.id);
+  //Return player to original location using initalplayerX and initialplayerY
   selectedPlayer.style.bottom = initialPlayerY;
   selectedPlayer.style.left = initialPlayerX;
 }
