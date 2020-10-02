@@ -269,8 +269,8 @@ body {
 }
 
 .landing__composition--player--waiters {
-  height: 50rem;
-  bottom: 25rem;
+  height: 52rem;
+  bottom: 20rem;
   left: 79%;
   z-index: 700;
 }
@@ -283,14 +283,14 @@ body {
 
 .landing__composition--player--green {
   height: 50rem;
-  bottom: 22rem;
+  bottom: 20rem;
   left: 50%;
   z-index: 700;
 }
 
 .landing__composition--player--howard {
-  height: 52rem;
-  bottom: 26rem;
+  height: 54rem;
+  bottom: 20rem;
   left: 62%;
   z-index: 600;
 }
@@ -310,8 +310,8 @@ body {
 }
 
 .landing__composition--player--smith {
-  height: 50rem;
-  bottom: 23rem;
+  height: 52rem;
+  bottom: 20rem;
   left: -3%;
   z-index: 800;
 }

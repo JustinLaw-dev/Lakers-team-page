@@ -85,8 +85,8 @@ body {
     }
 
     &--waiters {
-      height: 50rem;
-      @include bottomLeftAbsolute(25rem, 79%, 700);
+      height: 52rem;
+      @include bottomLeftAbsolute(20rem, 79%, 700);
     }
 
     &--bradley {
@@ -95,11 +95,11 @@ body {
 
     &--green {
       height: 50rem;
-      @include bottomLeftAbsolute(22rem, 50%, 700);
+      @include bottomLeftAbsolute(20rem, 50%, 700);
     }
     &--howard {
-      height: 52rem;
-      @include bottomLeftAbsolute(26rem, 62%, 600);
+      height: 54rem;
+      @include bottomLeftAbsolute(20rem, 62%, 600);
     }
     &--dudley {
       height: 50rem;
@@ -110,8 +110,8 @@ body {
       @include bottomLeftAbsolute(20rem, 29%, 800);
     }
     &--smith {
-      height: 50rem;
-      @include bottomLeftAbsolute(23rem, -3%, 800);
+      height: 52rem;
+      @include bottomLeftAbsolute(20rem, -3%, 800);
     }
   }
 }
