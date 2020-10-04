@@ -3,11 +3,17 @@ body {
   overflow: hidden;
 }
 
-.landing__player-name {
+.landing__player-detail {
+  display: flex;
+  flex: row;
+  align-items: center;
   position: absolute;
-
   @include bottomLeftAbsolute(60rem, 10rem, 1000);
-  font-size: 1.7rem;
+}
+
+.landing__player-name {
+  font-size: 2.2rem;
+  padding: 1rem;
   color: $color-white;
   text-transform: uppercase;
 
@@ -16,7 +22,6 @@ body {
 }
 
 .landing__back-arrow {
-  position: absolute;
   color: $color-black;
   font-size: 2rem;
   background-color: $color-white;
@@ -24,8 +29,6 @@ body {
   text-align: center;
   width: 3rem;
   height: 3rem;
-  top: 10%;
-  left: 5%;
   z-index: 9999;
 
   opacity: 0;

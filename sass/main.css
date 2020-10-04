@@ -171,12 +171,25 @@ body {
   overflow: hidden;
 }
 
-.landing__player-name {
+.landing__player-detail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: row;
+      -ms-flex: row;
+          flex: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: absolute;
   bottom: 60rem;
   left: 10rem;
   z-index: 1000;
-  font-size: 1.7rem;
+}
+
+.landing__player-name {
+  font-size: 2.2rem;
+  padding: 1rem;
   color: #ffffff;
   text-transform: uppercase;
   opacity: 0;
@@ -185,7 +198,6 @@ body {
 }
 
 .landing__back-arrow {
-  position: absolute;
   color: #000000;
   font-size: 2rem;
   background-color: #ffffff;
@@ -193,8 +205,6 @@ body {
   text-align: center;
   width: 3rem;
   height: 3rem;
-  top: 10%;
-  left: 5%;
   z-index: 9999;
   opacity: 0;
   -webkit-transition: all 0.2s;
