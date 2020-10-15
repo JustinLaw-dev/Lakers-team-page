@@ -49,7 +49,9 @@ function showStats(e) {
 
       console.log(initialPlayerX, initialPlayerY);
       e.currentTarget.style.bottom = '0%';
-      e.currentTarget.style.left = '-4%';
+      if (e.currentTarget.alt === 'Avery Bradley') {
+        e.currentTarget.style.left = '-4%';
+      } else e.currentTarget.style.left = '0%';
 
       backArrow.style.opacity = 1;
       playerHeading.style.opacity = 1;
@@ -108,7 +110,8 @@ function showStats(e) {
           .style('border-top', '1px black solid')
           .style('border-bottom', '1px black solid')
           .style('padding', '5px')
-          .style('background-color', 'white')
+          .style('background-color', 'transparent')
+          .style('color', 'white')
           // .on('mouseover', function () {
           //   d3.select(this).style('background-color', 'powderblue');
           // })
